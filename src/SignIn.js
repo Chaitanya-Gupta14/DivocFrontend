@@ -12,8 +12,11 @@ const SignIn = () => {
   const isSignedIn = (e,token) => {
     // e.preventDefault();
     if(token)
+    {
+      console.log("Signed In");
       return token;
-    else
+    }
+      else
     {
       toast.error("Invalid Credentials!!");
       return;
@@ -22,7 +25,7 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Signed In");
+    
     if(id.trim() === ''){
       toast.error("User Email is required!!")
       return;
