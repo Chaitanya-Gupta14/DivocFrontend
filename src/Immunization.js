@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 // import qs from 'qs';
-import Sign from './SignIn';
+// import Sign from './SignIn';
 
 const Immunization = () => {
   const [name, setName] = useState('');
@@ -15,7 +15,7 @@ const Immunization = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submitted");
-    const token = Sign.isSignedIn();
+    const token = JSON.parse(localStorage.getItem("user"));
     certify(e, token)
     // const blog = { title, body, au;thor };
 
