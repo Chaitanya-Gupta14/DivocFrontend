@@ -19,9 +19,9 @@ const Navbar = () => {
            background: '#FFE600',
            color: '#2E2E38',
           borderRadius: '8px' 
-        }}>Download</Link>
+        }}>Home</Link>
         
-        <Link to="/hp" style={{ 
+        {/* <Link to="/hp" style={{ 
           background: '#FFE600',
           color: '#2E2E38',
          borderRadius: '8px' 
@@ -31,7 +31,7 @@ const Navbar = () => {
           background: '#FFE600',
           color: '#2E2E38',
          borderRadius: '8px' 
-        }}>Immunzation</Link>
+        }}>Immunzation</Link> */}
       </div>
     </nav>
   );

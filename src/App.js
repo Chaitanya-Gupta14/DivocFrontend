@@ -1,11 +1,14 @@
 import Navbar from './Navbar';
-import Home from './Home';
+//import Home from './Home';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Create from './Immunization';
-import BlogDetails from './BlogDetails';
-import HealthProfessional from './HealthProfessional';
+// import Create from './Immunization';
+// import BlogDetails from './BlogDetails';
+// import HealthProfessional from './HealthProfessional';
 import SignIn from './SignIn';
+
+import Home from './Home';
+
 function App() {
   return (
     <Router>
@@ -21,7 +24,7 @@ function App() {
               <Home />
             </Route>
 
-            <Route path="/immunization">
+            {/* <Route path="/immunization">
               <Create />
             </Route>
             
@@ -31,7 +34,7 @@ function App() {
             
             <Route path="/hp">
               <HealthProfessional />
-            </Route>
+            </Route> */}
             
           </Switch>
         </div>

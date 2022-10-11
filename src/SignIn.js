@@ -1,42 +1,34 @@
 import { useState } from "react";
-import { toast } from "react-toastify";
+
 //import axios from "axios";
 import { login } from './backendCall.js';
+import { useHistory } from "react-router-dom";
 
-
+export var authorized = false;
 const SignIn = () => {
+  const history = useHistory();
   const [id, setID] = useState('');
   const [pass, setPassword] = useState('');
   
-
-  const isSignedIn = (e,token) => {
-    // e.preventDefault();
-    if(token)
-    {
-      console.log("Signed In");
-      return token;
-    }
-      else
-    {
-      toast.error("Invalid Credentials!!");
-      return;
-    }
-  }
+  // export const [authorized,setAuthorized] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     
-    if(id.trim() === ''){
-      toast.error("User Email is required!!")
-      return;
+    e.preventDefault();
+
+    let isSignedIn = login(id,pass);
+    // let localToken = JSON.parse(localStorage.getItem("user"));
+    
+    //Checking values
+    //console.log(token.resolve);
+    // console.log(localToken);
+    
+    if(isSignedIn)
+    {
+      history.push("/Home");
+      authorized = true;
     }
-    if(pass.trim() === ''){
-      toast.error("User password is required!!")
-      return;
-    }
-    const token = login(id,pass);
-    isSignedIn(token);
-    // console.log(token);
+    
   }
   
 
