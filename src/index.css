@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
-/* base styles */
+/*-------------------------[variable]---------------------------*/
+*{box-sizing:border-box}
+:root{--theme-color:#2D3E83;--theme-color-yellow:#FFE600;--theme-body-bg:#f5f5f5;--white:#fff;--black:#000;--links:#0e307a;--base-font-size:16px;}
+*{--font-family-base:'Poppins', sans-serif;--main-font:'Poppins', sans-serif;--main-normal:400;--main-medium:500;--main-bold:700;--main-exbold:900;--base-font-size:16px;}
+ul{padding: 0;}
+ul, li{list-style-type: none;}
+/*-------------------------[variable]---------------------------*/
+
+body {font-family: var(--font-family-base);font-size: var(--font-family-base);line-height: 1.5;    color: var(--bodycolor);}
+a {text-decoration: none;color: var(--links);}
+a:hover {color: var(--orange);}
+i{ color: var(--orange);}
+.sec-color {color: var(--links);}
+
+
+/* base styles
 * {
   margin: 0;
   font-family: "Quicksand";
@@ -16,16 +31,15 @@
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--white)fff;
 }
 .navbar h1 {
   color: #0a0104;
-  background-color: #ffffff;
+  background-color: var(--white)fff;
   padding-left: 20px;
 }
 .navbar .links {
-  margin-left: auto;
-  background-color: #ffffff;
+  background-color: var(--white)fff;
   
   
 }
@@ -33,7 +47,7 @@
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
-  background-color: #ffffff;
+  background-color: var(--white)fff;
   background: #FFE600;
   color: #2E2E38;
 }
@@ -41,13 +55,11 @@
   color: #0b0b0b;
 }
 .content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 10px;
-  background-color: #ffffff;
+  background-color: var(--white)fff;
+  height: 100%;
 }
 
-/* blog previews / list */
+/* blog previews / list
 .blog-preview {
   padding: 10px 16px;
   margin: 20px 0;
@@ -66,7 +78,7 @@
   text-decoration: none;
 }
 
-/* blog details page */
+/* blog details page 
 .blog-details h2 {
   font-size: 20px;
   color: #060002;
@@ -84,12 +96,12 @@
   cursor: pointer;
 }
 
-/* create new blog form */
+/* create new blog form 
 .create {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--white);
 }
 .create label {
   text-align: left;
@@ -99,7 +111,7 @@
   font-size: 20px;
   color: #070002;
   margin-bottom: 10px;
-  background-color: #ffffff;
+  background-color: var(--white)fff;
 }
 .create textarea, .create select {
   width: 70%;
@@ -169,3 +181,93 @@
 .description {
   font-size: 12px;
   }
+
+
+  /*************************/
+  .alert{width:100%;padding:5px;color:#062ff8}
+  
+  .App{width:100vw;height:100vh;display:flex;justify-content:flex-start;flex-direction:column;align-items:stretch;background:var(--theme-body-bg)}
+  .App .navbar{width:100%;background:#fff;min-height:13vh}
+
+
+  .box-form .login-left-wrapper{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px;position:relative;z-index:1}
+  .box-form .login-left-wrapper:before{content:"";background:rgba(0,31,255,0.21);position:absolute;z-index:-1;height:100%;width:100%;top:0;left:0}
+  .login-blue-bg{border-radius:5px;padding:30px;background-color:rgba(0,0,0,0.03);display:flex;align-items:center;justify-content:center;flex-direction:column;max-width:585px;width:100%;text-align:center}
+  .signInPage{height:85vh}
+  .box-form .left{color:var(--white);background-size:cover;background-repeat:no-repeat;background-image:url();overflow:hidden}
+  .box-form .left .overlay{padding:30px;width:100%;height:100%;background:#ffe00396;overflow:hidden;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+  .box-form div{height:auto}
+  .box-form{background:var(--white);border-radius:10px;overflow:hidden;display:flex;flex:1 1 100%;align-items:stretch;justify-content:space-between}
+  .box-form .right{padding:40px;overflow:hidden;display:flex;flex-direction:column;align-items:stretch;justify-content:center}
+  .box-form .right h2{font-size:50px;line-height:normal;margin-bottom:24px}
+  .box-form .right input{width:100%;padding:10px;margin-top:10px;font-size:16px;border:none;outline:none;border:2px solid #b0b3b9;margin-bottom:10px}
+  .box-form .right .inputs{overflow:hidden}
+  .box-form .right button{font-size:16px;padding:12px 35px;display:inline-block;border:0;outline:0;background-image:linear-gradient(135deg,#FFE600 10%,#f2da00 100%)}
+
+  .login-blue-bg .login-content h1{color:var(--black)}
+  .login-blue-bg .login-content p{color:var(--black)}
+
+  .navbar{height:15vh}
+
+  .img{border:1px solid #ddd;padding:10px;width:50px;height:50px}
+
+  .btn{margin:3px}
+  .btn-orange{background-color:var(--theme-color-yellow)!important;color:var(--black)}
+  .btnsubmit{margin-top:20px}
+
+  .logopart h1{margin:0;margin-left:10px}
+
+
+  .section-padding{padding:40px 0}
+  .section-title{font-size:32px;font-weight:var(--main-bold);color:#333;mix-blend-mode:difference;text-align:center}
+  .card{padding:20px}
+  
+
+  input:focus, textarea:focus, select:focus{
+    border-color: #ff80ff;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(255, 100, 255, 0.5);
+    /*border-color: var(--theme-color-yellow);
+    box-shadow: 0 0 3px var(--theme-color-yellow);
+    -moz-box-shadow: 0 0 3px var(--theme-color-yellow);
+    -webkit-box-shadow: 0 0 3px var(--theme-color-yellow);*/
+}
+
+
+
+/*-------------------------[media block]---------------------------*/
+
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {max-width: 1440px;}
+  }
+  
+  @media ( max-width : 1366px) {
+  }
+  
+  @media ( max-width : 1240px) {
+  }
+  
+  @media ( max-width : 1040px) {
+  }
+  
+  @media (min-width: 992px){
+  .container, .container-lg, .container-md, .container-sm {max-width: 98%;}
+  }
+  
+  @media ( max-width : 768px) {
+  
+    
+  .App .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  }    
+  
+  @media (min-width: 768px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {max-width: 1440px;}
+  }
+  
+  @media (min-width: 576px){
+  }
+  
+

@@ -1,64 +1,60 @@
 import { useState } from "react";
 
 //import axios from "axios";
-import { login } from './backendCall.js';
+import { login } from "./backendCall.js";
 import { useHistory } from "react-router-dom";
 
 export var authorized = false;
 const SignIn = () => {
   const history = useHistory();
-  const [id, setID] = useState('');
-  const [pass, setPassword] = useState('');
-  
+  const [id, setID] = useState("");
+  const [pass, setPassword] = useState("");
+
   // export const [authorized,setAuthorized] = useState('');
 
   const handleSubmit = (e) => {
-    
     e.preventDefault();
 
-    let isSignedIn = login(id,pass);
+    let isSignedIn = login(id, pass);
     // let localToken = JSON.parse(localStorage.getItem("user"));
-    
+
     //Checking values
     //console.log(token.resolve);
     // console.log(localToken);
-    
-    if(isSignedIn)
-    {
+
+    if (isSignedIn) {
       history.push("/Home");
       authorized = true;
     }
-    
-  }
-  
+  };
 
-//   const getToken = () => {
+  //   const getToken = () => {
 
-//     var data = qs.stringify({
-//       'client_id': 'registry-frontend',
-//       'username': 'vishwa1',
-//       'password': 'abcd@123',
-//       'grant_type': 'password'
-//     });
-//     var config = {
-//       method: 'post',
-//       url: 'http://52.172.132.121/auth/realms/sunbird-rc/protocol/openid-connect/token',
-//       headers: {
-//         'Content-Type': 'application/x-www-form-urlencoded'
-//       },
-//       data: data
-//     };
+  //     var data = qs.stringify({
+  //       'client_id': 'registry-frontend',
+  //       'username': 'vishwa1',
+  //       'password': 'abcd@123',
+  //       'grant_type': 'password'
+  //     });
+  //     var config = {
+  //       method: 'post',
+  //       url: 'http://52.172.132.121/auth/realms/sunbird-rc/protocol/openid-connect/token',
+  //       headers: {
+  //         'Content-Type': 'application/x-www-form-urlencoded'
+  //       },
+  //       data: data
+  //     };
 
-//     const token = axios(config)
-//       .then(function (response) {
-//         //console.log(JSON.stringify(response.data));
-//       })
-//       .catch(function (error) {
-//         console.log(error);
-//       });
+  //     const token = axios(config)
+  //       .then(function (response) {
+  //         //console.log(JSON.stringify(response.data));
+  //       })
+  //       .catch(function (error) {
+  //         console.log(error);
+  //       });
 
-//     return token;
-//   }
+  //     return token;
+  //   }
 
   // const Certify = (token) => {
   //   var data = 'Welcome user!!';
@@ -68,7 +64,7 @@ const SignIn = () => {
   //     responseType: 'blob',
   //     data : data
   //   };
-    
+
   //   axios(config)
   //   .then(response => {
   //         const fileURL = 'Home.js'
@@ -78,37 +74,62 @@ const SignIn = () => {
   //     .catch(error => {
   //         console.log(error);
   //     });
-    
+
   // }
 
-
-
   return (
-    <div className="create">
-      <h2>SignIn Page</h2>
-       
-       <form onSubmit={handleSubmit}>
-        <label>Enter User-Name:</label>
-        <input
-          type="text"
-          required
-          value={id}
-          onChange={(e) => setID(e.target.value)}
-        />
+    <div className="container-fluid signInPage">
+      <div className="box-form row h-100">
+        <div className="col-6 left">
+          <div className="overlay">
+            <div className="login-blue-bg">
+              <div className="login-content">
+                <div className="login-image">
+                  <img src="images/login.png" className="img-fluid loginimg" />
+                </div>
+                <div className="login-welcome-message">
+                  <h1>Welcome To Verifiable Credentialing System</h1>
+                  <p>
+                    Grursus mal suada faci lisis Lorem ipsum dolarorit more
+                    ametion consectetur elit. Vesti at bulum nec odio aea the
+                    dumm ipsumm ipsum that dolocons rsus mal suada.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-6 right">
+          <h2>Sign In</h2>
 
-        <label>Enter Password:</label>
-        <input
-          type="password"
-          required
-          value={pass}
-          title="Must contain at least one number and one uppercase and lowercase letter"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        
-        <button>Submit</button>
-      </form>
+          <form onSubmit={handleSubmit}>
+            <div class="form-group">
+              <label>Enter User-Name</label>
+              <input
+                className="form-control"
+                type="text"
+                required
+                value={id}
+                onChange={(e) => setID(e.target.value)}
+              />
+            </div>
+            <div class="form-group">
+              <label>Enter Password</label>
+              <input
+                className="form-control"
+                type="password"
+                required
+                value={pass}
+                title="Must contain at least one number and one uppercase and lowercase letter"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <button className="btn btnsubmit">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default SignIn;
