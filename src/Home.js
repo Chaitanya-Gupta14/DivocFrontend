@@ -15,13 +15,13 @@ const Home = () => {
       <div className="row h-100">
         <h2 className="section-title">Choose Schema</h2>
         <div className="d-flex justify-content-center align-item-center flex-wrap h-100">
-          
+        
           {CardData.map((value, index) => (
             <div className="col-lg-4 col-sm-12 p-2">
               <div className="card text-center" key={index}>
                   <p className="card-title"> {value} </p>
                   <p className="description ">
-                    Lorem Ipsum has been the industry's standard dummy text ever
+                    Lorem been the industry's standard dummy text ever
                     since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book.
                   </p>
@@ -34,6 +34,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+
     </div>
   );
 };
