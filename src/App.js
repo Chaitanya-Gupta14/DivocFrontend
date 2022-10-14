@@ -1,4 +1,5 @@
 import Navbar from './Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //import Home from './Home';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -13,8 +14,15 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <div className="content">
+        <div className="container-fluid">
+          <div className="row d-flex justify-content-between align-item-center">
+            <div className="col-lg-12">
+                <Navbar />
+            </div>
+          </div>
+        </div>
+        
+        <div className="">
           <Switch>
             <Route exact path="/">
               <SignIn />
