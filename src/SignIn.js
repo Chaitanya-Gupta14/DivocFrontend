@@ -1,8 +1,7 @@
 import { useState } from "react";
-
-//import axios from "axios";
-import { login } from "./backendCall.js";
+import { Login } from "./backendCall.js";
 import { useHistory } from "react-router-dom";
+
 
 export var authorized = false;
 const SignIn = () => {
@@ -10,18 +9,11 @@ const SignIn = () => {
   const [id, setID] = useState("");
   const [pass, setPassword] = useState("");
 
-  // export const [authorized,setAuthorized] = useState('');
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let isSignedIn = login(id, pass);
-    // let localToken = JSON.parse(localStorage.getItem("user"));
-
-    //Checking values
-    //console.log(token.resolve);
-    // console.log(localToken);
-
+    let isSignedIn = Login(id, pass);
+    
     if (isSignedIn) {
       history.push("/Home");
       authorized = true;
@@ -85,7 +77,7 @@ const SignIn = () => {
             <div className="login-blue-bg">
               <div className="login-content">
                 <div className="login-image">
-                  <img src="images/login.png" className="img-fluid loginimg" />
+                  {/* <img src="images/login.png" className="img-fluid loginimg" /> */}
                 </div>
                 <div className="login-welcome-message">
                   <h1>Welcome To Verifiable Credentialing System</h1>
@@ -103,7 +95,7 @@ const SignIn = () => {
           <h2>Sign In</h2>
 
           <form onSubmit={handleSubmit}>
-            <div class="form-group">
+            <div className="form-group">
               <label>Enter User-Name</label>
               <input
                 className="form-control"
@@ -113,7 +105,7 @@ const SignIn = () => {
                 onChange={(e) => setID(e.target.value)}
               />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <label>Enter Password</label>
               <input
                 className="form-control"

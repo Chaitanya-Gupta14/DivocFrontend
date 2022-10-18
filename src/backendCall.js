@@ -7,7 +7,7 @@ const API_URL = 'http://localhost:8085';
 
 
 
-export const login = (username,password) => {
+export const Login = (username,password) => {
   return axios
     .post(API_URL+"/authenticate", { username, password })
     .then((response) => {

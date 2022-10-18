@@ -4,10 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import Create from './Immunization';
-// import BlogDetails from './BlogDetails';
-// import HealthProfessional from './HealthProfessional';
+import OnSubmitCertify1 from './OnSubmitCertify1';
+import OnSubmitCertify2 from './OnSubmitCertify2';
 import SignIn from './SignIn';
-
 import Home from './Home';
 
 function App() {
@@ -30,6 +29,14 @@ function App() {
 
             <Route exact path="/Home">
               <Home />
+            </Route>
+
+            <Route path="/HealthProfessional7">
+              <OnSubmitCertify1 />
+            </Route>
+
+            <Route path="/NHAUIPCertificateSample">
+              <OnSubmitCertify2 />
             </Route>
 
             {/* <Route path="/immunization">
