@@ -75,7 +75,7 @@ const SignIn = () => {
   return (
     <div className="container-fluid signInPage">
       <div className="box-form login-page row h-100">
-        <div className="col-6 left">
+        <div className="col-12 col-md-6 col-lg-6 left">
           <div className="overlay">
             <div className="login-blue-bg">
               <div className="login-content">
@@ -89,32 +89,37 @@ const SignIn = () => {
             </div>
           </div>
         </div>
-        <div className="col-6 right">
+        <div className="col-12 col-md-6 col-lg-6 right">
           <h2>Sign In</h2>
-
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label>Enter User-Name</label>
-              <input
-                className="form-control"
-                type="text"
-                required
-                value={id}
-                onChange={(e) => setID(e.target.value)}
-              />
+            <div className="row justify-content-between text-left">
+              <div className="form-group flex-column d-flex">
+                <label className="form-control-label px-0">Enter User-Name</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  required
+                  value={id}
+                  onChange={(e) => setID(e.target.value)}
+                />
+              </div>
+              <div className="form-group flex-column d-flex">
+                <label className="form-control-label px-0">Enter Password</label>
+                <input
+                  className="form-control"
+                  type="password"
+                  required
+                  value={pass}
+                  title="Must contain at least one number and one uppercase and lowercase letter"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
             </div>
-            <div className="form-group">
-              <label>Enter Password</label>
-              <input
-                className="form-control"
-                type="password"
-                required
-                value={pass}
-                title="Must contain at least one number and one uppercase and lowercase letter"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <button className="btn btnsubmit">Submit</button>
+            <div className="row justify-content-end">
+              <div className="form-group col-12"> 
+                <button className="btn btnsubmit">Submit</button>
+              </div>
+            </div>    
           </form>
         </div>
       </div>

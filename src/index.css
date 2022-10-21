@@ -29,7 +29,7 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
 
   .alert{width:100%;padding:5px;color:#062ff8}  
   
-  .App{display:flex;justify-content:flex-start;flex-direction:column;align-items:stretch;background:var(--theme-body-bg)}
+  .App{height:100vh;display:flex;justify-content:flex-start;flex-direction:column;align-items:stretch;background:var(--theme-body-bg)}
   .App .navbar{width:100%;}
 
   .box-form .login-left-wrapper{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px;position:relative;z-index:1}
@@ -66,7 +66,7 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   .btn-orange{background-color:var(--theme-color-yellow)!important;color:var(--var(--black))}
   .btnsubmit{margin-top:20px}
   .section-padding{padding:40px 0}
-  .section-title{font-size:32px;font-weight:var(--main-bold);color:#333;mix-blend-mode:difference;text-align:center}
+  .section-title{font-size:32px;font-weight:var(--main-medium);color:var(--black);mix-blend-mode:difference;text-align:center}
   .card{padding:20px}
 
 
@@ -124,6 +124,13 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   margin-right: 20px;
   margin-bottom: 20px;
  
+}
+
+.hombg{
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url('https://images.pexels.com/photos/5380594/pexels-photo-5380594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 86vh;
 }
 
 

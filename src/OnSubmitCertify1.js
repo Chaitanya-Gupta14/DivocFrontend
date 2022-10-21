@@ -55,12 +55,12 @@ const OnSubmitCertify1 = () => {
 
 return (
 
-<div className="container-fluid px-1 py-3 mx-auto OnSubmitCertify1">
-  <div className="container card-0 justify-content-center">
+  <div className="container-fluid px-1 py-3 mx-auto OnSubmitCertify1">
+    <div className="container card-0 justify-content-center">
       <div className="row d-flex justify-content-center">
           <div className="col-xl-10 col-lg-10 col-md-10 col-11 text-center mb-4 flex-column">
-              <h2 className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-3 mb-3 form-title">Health Professional</h2>   
-              <p>Transaction id is: {transactionId}</p>         
+              <h2 className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-3 mb-2 form-title">Health Professional</h2>   
+              <p className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-0 mb-3 form-title">Transaction id is: {transactionId}</p>         
               <div className="card box-form">
                   <form className="form-card" onSubmit={handleSubmit}>
                       <div className="row justify-content-between text-left">
@@ -194,9 +194,8 @@ return (
               </div>
           </div>
       </div>
-
-  </div>
-</div>    
+    </div>
+  </div>    
   );
 }
 
