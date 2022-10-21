@@ -17,6 +17,8 @@ const SignIn = () => {
     if (isSignedIn) {
       history.push("/Home");
       authorized = true;
+    } else {
+      
     }
   };
 
@@ -71,7 +73,7 @@ const SignIn = () => {
 
   return (
     <div className="container-fluid signInPage">
-      <div className="box-form row h-100">
+      <div className="box-form login-page row h-100">
         <div className="col-6 left">
           <div className="overlay">
             <div className="login-blue-bg">

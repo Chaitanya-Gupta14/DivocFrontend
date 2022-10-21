@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="container-fluid">
+        <div className="container-fluid NavbarWrapper">
           <div className="row d-flex justify-content-between align-item-center">
             <div className="col-lg-12">
                 <Navbar />

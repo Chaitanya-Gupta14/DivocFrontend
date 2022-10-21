@@ -74,121 +74,156 @@ const OnSubmitCertify1 = () => {
     //   }
 
 return (
-    <div className="create">
-      <h2>Health Professional</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Registration ID:</label>
-        <input
-          type="text"
-          value={registrationId}
-          onChange={(e) => setRegistrationId(e.target.value)}
-        />
-         <label>Certificate ID:</label>
-        <input
-          type="text"
-          value={certificateId}
-          onChange={(e) => setCertificateId(e.target.value)}
-        />
-         <label>Name:</label>
-        <input
-          type="text"
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-         <label>DOB:</label>
-        <input
-          type="text"
-          required
-          value={dob}
-          onChange={(e) => setDOB(e.target.value)}
-        />
-        <label>Gender:</label>
-        <input
-          type="text"
-          value={gender}
-          onChange={(e) => setGender(e.target.value)}
-        />
-        <label>Registration Council:</label>
-        <input
-          type="text"
-          required
-          value={registrationCouncil}
-          onChange={(e) => setRegistrationCouncil(e.target.value)}
-        />
-        <label>Registration Date:</label>
-        <input
-          type="text"
-          required
-          value={registrationDate}
-          onChange={(e) => setRegistrationDate(e.target.value)}
-        />
-        <label>Registration Expiry:</label>
-        <input
-          type="text"
-          value={registrationExpiry}
-          onChange={(e) => setRegistrationExpiry(e.target.value)}
-        />
-        <label>System of Medicine:</label>
-        <input
-          type="text"
-          required
-          value={systemOfMedicine}
-          onChange={(e) => setSystemOfMedicine(e.target.value)}
-        />
-        <label>Latest Qualification:</label>
-        <input
-          type="text"
-          required
-          value={latestQualification}
-          onChange={(e) => setLatestQualification(e.target.value)}
-        />
-        <label>University:</label>
-        <input
-          type="text"
-          value={university}
-          onChange={(e) => setUniversity(e.target.value)}
-        />
-        <label>Degree Year:</label>
-        <input
-          type="text"
-          required
-          value={degreeYear}
-          onChange={(e) => setDegreeYear(e.target.value)}
-        />
-        <label>Issuer:</label>
-        <input
-          type="text"
-          required
-          value={issuer}
-          onChange={(e) => setIssuer(e.target.value)}
-        />
-        <label>Issuance Date:</label>
-        <input
-          type="text"
-          required
-          value={issuanceDate}
-          onChange={(e) => setIssuanceDate(e.target.value)}
-        />
-        <label>Valid From:</label>
-        <input
-          type="text"
-          required
-          value={validFrom}
-          onChange={(e) => setValidFrom(e.target.value)}
-        />
-        <label>Valid Until:</label>
-        <input
-          type="text"
-          required
-          value={validUntil}
-          onChange={(e) => setValidUntil(e.target.value)}
-        />
-        <button>Generate Transaction ID</button>
-      </form>
+<div className="container-fluid px-1 py-3 mx-auto OnSubmitCertify1">
+  <div className="container card-0 justify-content-center ">
+      <div className="row d-flex justify-content-center">
+          <div className="col-xl-10 col-lg-10 col-md-10 col-11 text-center mb-4 flex-column">
+              <h2 className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-3 mb-3 form-title">Health Professional</h2>            
+              <div className="card box-form">
+                  <form className="form-card" onSubmit={handleSubmit}>
+                      <div className="row justify-content-between text-left">
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                          <label className="form-control-label px-0">Registration ID:</label> 
+                          <input type="text" className="form-control" value={registrationId} onChange={(e) => setRegistrationId(e.target.value)}/>
+                          </div>
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Certificate ID:</label> 
+                            <input type="text" className="form-control" value={certificateId} onChange={(e) => setCertificateId(e.target.value)}/> 
+                          </div>
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Name:</label> 
+                            <input type="text" className="form-control" required value={name} onChange={(e) => setName(e.target.value)} /> 
+                          </div>
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">DOB:</label> 
+                            <input type="text" className="form-control" required value={dob} onChange={(e) => setDOB(e.target.value)} /> 
+                          </div>
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Gender:</label> 
+                            <input type="text" className="form-control" value={gender} onChange={(e) => setGender(e.target.value)}
+                            />
+                          </div>
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Registration Council:</label> 
+                            <input type="text" className="form-control" required value={registrationCouncil} onChange={(e) => setRegistrationCouncil(e.target.value)} />
+                          </div>
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Registration Date:</label> 
+                            <input type="text" className="form-control" required value={registrationDate} onChange={(e) => setRegistrationDate(e.target.value)}
+                            />
+                          </div>
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Registration Expiry:</label> 
+                            <input  type="text" className="form-control" value={registrationExpiry}
+                              onChange={(e) => setRegistrationExpiry(e.target.value)}
+                            />
+                          </div>
+
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">System of Medicine:</label> 
+                            <input type="text" className="form-control" required value={systemOfMedicine} onChange={(e) => setSystemOfMedicine(e.target.value)}
+                            />
+                          </div>
+                          
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">University:</label> 
+                            <input
+                              type="text"
+                              className="form-control" 
+                              required
+                              value={latestQualification}
+                              onChange={(e) => setLatestQualification(e.target.value)}
+                            />
+                          </div>
+
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Latest Qualification:</label> 
+                            <input
+                              type="text"
+                              className="form-control" 
+                              value={university}
+                              onChange={(e) => setUniversity(e.target.value)}
+                            />
+                          </div>
+
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Degree Year:</label> 
+                            <input
+                              type="text"
+                              className="form-control" 
+                              required
+                              value={degreeYear}
+                              onChange={(e) => setDegreeYear(e.target.value)}
+                            />
+                          </div>
+
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Issuer:</label> 
+                            <input
+                              type="text"
+                              className="form-control" 
+                              required
+                              value={issuer}
+                              onChange={(e) => setIssuer(e.target.value)}
+                            />
+                          </div>
+
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Issuance Date:</label> 
+                            <input
+                              type="text"
+                              className="form-control" 
+                              required
+                              value={issuanceDate}
+                              onChange={(e) => setIssuanceDate(e.target.value)}
+                            />
+                          </div>
+
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Valid From:</label> 
+                            <input
+                              type="text"
+                              className="form-control" 
+                              required
+                              value={validFrom}
+                              onChange={(e) => setValidFrom(e.target.value)}
+                            />
+                          </div>
+
+                          <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                            <label className="form-control-label px-0">Valid Until:</label> 
+                            <input
+                                type="text" className="form-control" 
+                                required
+                                value={validUntil}
+                                onChange={(e) => setValidUntil(e.target.value)}
+                              />
+                          </div>
+
+
+                        </div>
+                      
+                        <div className="row justify-content-end">
+                          <div className="form-group col-12"> 
+                            <button type="submit" className="btn btnsubmit">Generate Transaction ID</button> 
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
     </div>
+</div>
+
+
+
+    
   );
 }
 
 
 export default OnSubmitCertify1;
+
+
+
+

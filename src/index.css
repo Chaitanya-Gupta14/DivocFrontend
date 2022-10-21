@@ -14,181 +14,23 @@ a {text-decoration: none;color: var(--links);}
 a:hover {color: var(--orange);}
 i{ color: var(--orange);}
 .sec-color {color: var(--links);}
-
+p{font-size: 16px;line-height: 25px !important;font-weight: 500}
 
 /* base styles
-* {
-  margin: 0;
-  font-family: "Quicksand";
-  color: #333;
-  background-color: #F6F6FA;
-}
-.navbar {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
-  text-align: center;
-  background-color: var(--white)fff;
-}
-.navbar h1 {
-  color: #0a0104;
-  background-color: var(--white)fff;
-  padding-left: 20px;
-}
-.navbar .links {
-  background-color: var(--white)fff;
-  
-  
-}
-.navbar a {
-  margin-left: 16px;
-  text-decoration: none;
-  padding: 6px;
-  background-color: var(--white)fff;
-  background: #FFE600;
-  color: #2E2E38;
-}
-.navbar a:hover {
-  color: #0b0b0b;
-}
-.content {
-  background-color: var(--white)fff;
-  height: 100%;
-}
-
-/* blog previews / list
-.blog-preview {
-  padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
-}
-.blog-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-}
-.blog-preview h2 {
-  font-size: 20px;
-  background: #FFE600;
-  color: #2E2E38;
-  margin-bottom: 8px;
-}
-.blog-preview a{
-  text-decoration: none;
-}
-
-/* blog details page 
-.blog-details h2 {
-  font-size: 20px;
-  color: #060002;
-  margin-bottom: 10px;
-}
-.blog-details div {
-  margin: 20px 0;
-}
-.blog-details button {
-  background: #FFE600;
-  color: #2E2E38;
-  border: 0;
-  padding: 2px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* create new blog form 
-.create {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  background-color: var(--white);
-}
-.create label {
-  text-align: left;
-  display: block;
-}
-.create h2 {
-  font-size: 20px;
-  color: #070002;
-  margin-bottom: 10px;
-  background-color: var(--white)fff;
-}
-.create textarea, .create select {
-  width: 70%;
-  padding: 2px 2px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  display: block;
-}
-.create input {
-  width: 50%;
-  padding: 2px 2px;
-  margin: 2px 0;
-  border: 1px solid rgb(228, 218, 105);
-  box-sizing: border-box;
-  display: block;
-}
-
-.create button {
-  background: #FFE600;
-  color: #2E2E38;
-  border: 10px;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-right: 20px;
-  margin-bottom: 20px;
- 
-}
-.alert {
-  width: 100%;
-  padding: 5px;
-  color: rgb(6, 47, 248);
-}
-
-.img {
-  border: 1px solid #ddd;
-  padding: 10px;
-  width: 50px;
-  height: 50px;
-}
-
-.card {
-  border: 1px solid black;
-  box-shadow: 0 0 5px black;
-  width: 250px;
-  margin: 20px;
-  display: inline-block
-}
-
-.card-image img {
-  width: 249px;
-}
-
-.card-title,
-.description {
-  text-align: center;
-  margin: 0;
-  padding: 10px;
-}
-
-.card-title {
-  font-weight : bold;
-  font-size : 14px;
-  }
-
-.description {
-  font-size: 12px;
-  }
-
-
+*{margin:0;font-family:"Quicksand";color:#333;background-color:#F6F6FA}
+.navbar{padding:20px;display:flex;align-items:center;max-width:100%;margin:0 auto;border-bottom:1px solid #f2f2f2;text-align:center;background-color:var(--white)fff}
+.navbar h1{color:#0a0104;background-color:var(--white)fff;padding-left:20px}
+.navbar .links{background-color:var(--white)fff}
+.navbar a{margin-left:16px;text-decoration:none;padding:6px;background-color:var(--white)fff;background:#FFE600;color:#2E2E38}
+.navbar a:hover{color:#0b0b0b}
+.content{background-color:var(--white)fff;height:100%}
   /*************************/
-  .alert{width:100%;padding:5px;color:#062ff8}
-  
-  .App{width:100vw;height:100vh;display:flex;justify-content:flex-start;flex-direction:column;align-items:stretch;background:var(--theme-body-bg)}
-  .App .navbar{width:100%;background:#fff;min-height:13vh}
 
+
+  .alert{width:100%;padding:5px;color:#062ff8}  
+  
+  .App{display:flex;justify-content:flex-start;flex-direction:column;align-items:stretch;background:var(--theme-body-bg)}
+  .App .navbar{width:100%;}
 
   .box-form .login-left-wrapper{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px;position:relative;z-index:1}
   .box-form .login-left-wrapper:before{content:"";background:rgba(0,31,255,0.21);position:absolute;z-index:-1;height:100%;width:100%;top:0;left:0}
@@ -199,40 +41,37 @@ i{ color: var(--orange);}
   .box-form div{height:auto}
   .box-form{background:var(--white);border-radius:10px;overflow:hidden;display:flex;flex:1 1 100%;align-items:stretch;justify-content:space-between}
   .box-form .right{padding:40px;overflow:hidden;display:flex;flex-direction:column;align-items:stretch;justify-content:center}
-  .box-form .right h2{font-size:50px;line-height:normal;margin-bottom:24px}
-  .box-form .right input{width:100%;padding:10px;margin-top:10px;font-size:16px;border:none;outline:none;border:2px solid #b0b3b9;margin-bottom:10px}
-  .box-form .right .inputs{overflow:hidden}
-  .box-form .right button{font-size:16px;padding:12px 35px;display:inline-block;border:0;outline:0;background-image:linear-gradient(135deg,#FFE600 10%,#f2da00 100%)}
+  .box-form h2{font-size:50px;line-height:normal;margin-bottom:24px}
+  .box-form input{width:100%;padding:6px 8px;margin-top:0;font-size:16px;border:none;outline:none;border:1px solid #b0b3b9;margin-bottom:10px}
+  .signInPage .box-form input {padding:10px;}
+  .box-form .inputs{overflow:hidden}
+  .box-form button{font-size:16px;padding:12px 35px;display:inline-block;border:0;outline:0;background-image:linear-gradient(135deg,#FFE600 10%,#f2da00 100%)}
+  .box-form button:hover{color: #333 !important;}
+  .box-form .form-control-label{text-align: left;color: var(--black);margin-bottom: 5px;font-weight: var(--main-medium);font-size: 14px}
+  .box-form h2{color: var(--black);}
+  .box-form.login-page input{margin-top: 10px;}
+
+  .OnSubmitCertify1 .container{border-radius: 20px}
+  .card-0{background: linear-gradient(-18deg, rgb(255, 255, 255) 50%, var(--theme-color-yellow) 50%);color: var(--white);border: 0px}
+  .inner-card{margin: 79px 0px 70px 0px}
+  .card-0{margin-top: 15px;margin-bottom: 15px}
+  .card-1{border-radius: 17px;color: var(--black);box-shadow: 2px 4px 15px 0px rgb(0, 0, 0, 0.5) !important}
+  .card-0 .form-title{color: var(--black);}
 
   .login-blue-bg .login-content h1{color:var(--black)}
   .login-blue-bg .login-content p{color:var(--black)}
 
-  .navbar{height:15vh}
-
   .img{border:1px solid #ddd;padding:10px;width:50px;height:50px}
-
   .btn{margin:3px}
-  .btn-orange{background-color:var(--theme-color-yellow)!important;color:var(--black)}
+  .btn-orange{background-color:var(--theme-color-yellow)!important;color:var(--var(--black))}
   .btnsubmit{margin-top:20px}
-
-  .logopart h1{margin:0;margin-left:10px}
-
-
   .section-padding{padding:40px 0}
   .section-title{font-size:32px;font-weight:var(--main-bold);color:#333;mix-blend-mode:difference;text-align:center}
   .card{padding:20px}
-  
-
-  input:focus, textarea:focus, select:focus{
-    border-color: #ff80ff;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(255, 100, 255, 0.5);
-    /*border-color: var(--theme-color-yellow);
-    box-shadow: 0 0 3px var(--theme-color-yellow);
-    -moz-box-shadow: 0 0 3px var(--theme-color-yellow);
-    -webkit-box-shadow: 0 0 3px var(--theme-color-yellow);*/
-}
-
-
+  .NavbarWrapper{background: var(--white);}
+  .logopart h1 {margin-left: 10px;}
+  .logopart .img {padding: 4px 6px;width: 50px;height: 50px;}
+  .form-control:focus, button:focus, button:focus:not(:focus-visible), button:focus-visible, .btn.btn-orange:focus, .btn.btn-orange:focus:not(:focus-visible), .btn.btn-orange:focus-visible {outline: none; border:1px solid #28a745 !important; box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;}
 
 /*-------------------------[media block]---------------------------*/
 
@@ -253,8 +92,12 @@ i{ color: var(--orange);}
   .container, .container-lg, .container-md, .container-sm {max-width: 98%;}
   }
   
+  @media (max-width: 992px){
+  .logopart h1 {font-size: calc(.75rem + 1.5vw);}
+  }
+
   @media ( max-width : 768px) {
-  
+    .logopart h1 {font-size: calc(0.50rem + 1.5vw);}
     
   .App .navbar{
     display: flex;
