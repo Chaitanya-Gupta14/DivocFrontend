@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Login } from "./backendCall.js";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 export var authorized = false;
@@ -18,7 +19,7 @@ const SignIn = () => {
       history.push("/Home");
       authorized = true;
     } else {
-      
+      toast.error("Invalid Credentials!!");
     }
   };
 
@@ -83,11 +84,6 @@ const SignIn = () => {
                 </div>
                 <div className="login-welcome-message">
                   <h1>Welcome To Verifiable Credentialing System</h1>
-                  <p>
-                    Grursus mal suada faci lisis Lorem ipsum dolarorit more
-                    ametion consectetur elit. Vesti at bulum nec odio aea the
-                    dumm ipsumm ipsum that dolocons rsus mal suada.
-                  </p>
                 </div>
               </div>
             </div>
