@@ -12,7 +12,6 @@ const Home = () => {
   let Redirect = useHistory()
   // const token = JSON.parse(localStorage.getItem("user"));
   if(!authorized){
-    console.log("Not Working!!")
     Redirect.push("/");
   }
       
@@ -41,11 +40,6 @@ const Home = () => {
             <div className="col-lg-4 col-sm-12 p-2">
               <div className="card text-center" key={index}>
                 <p className="card-title"> {value} </p>
-                <p className="description ">
-                  Lorem been the industry's standard dummy text ever
-                  since the 1500s, when an unknown printer took a galley of type
-                  and scrambled it to make a type specimen book.
-                </p>
                 <div className="button-grp d-flex justify-content-center align-item-center h-100">
                   <button className="btn btn-orange">Download</button>
                   <button className="btn btn-orange" onClick={() => handleClick(index)}>Certify</button>
