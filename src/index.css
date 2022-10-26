@@ -16,17 +16,7 @@ i{ color: var(--orange);}
 .sec-color {color: var(--links);}
 p{font-size: 16px;line-height: 25px !important;font-weight: 500}
 
-/* base styles
-*{margin:0;font-family:"Quicksand";color:#333;background-color:#F6F6FA}
-.navbar{padding:20px;display:flex;align-items:center;max-width:100%;margin:0 auto;border-bottom:1px solid #f2f2f2;text-align:center;background-color:var(--white)fff}
-.navbar h1{color:#0a0104;background-color:var(--white)fff;padding-left:20px}
-.navbar .links{background-color:var(--white)fff}
-.navbar a{margin-left:16px;text-decoration:none;padding:6px;background-color:var(--white)fff;background:#FFE600;color:#2E2E38}
-.navbar a:hover{color:#0b0b0b}
-.content{background-color:var(--white)fff;height:100%}
-  /*************************/
-
-
+/************ base styles *************************/
   .alert{width:100%;padding:5px;color:#062ff8}  
   
   .App{height:100vh;display:flex;justify-content:flex-start;flex-direction:column;align-items:stretch;background:var(--theme-body-bg)}
@@ -34,7 +24,8 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
 
   .box-form .login-left-wrapper{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px;position:relative;z-index:1}
   .box-form .login-left-wrapper:before{content:"";background:rgba(0,31,255,0.21);position:absolute;z-index:-1;height:100%;width:100%;top:0;left:0}
-  .login-blue-bg{border-radius:5px;padding:30px;background-color:rgba(0,0,0,0.03);display:flex;align-items:center;justify-content:center;flex-direction:column;max-width:585px;width:100%;text-align:center}
+  .login-blue-bg{border-radius:5px;padding:22px;background-color:rgba(0,0,0,0.03);display:flex;align-items:center;justify-content:center;flex-direction:column;max-width:585px;width:100%;text-align:center}
+  .login-blue-bg .login-content{background-color: rgba(0,0,0,0.03);}
   .signInPage{height:85vh}
   .box-form .left{color:var(--white);background-size:cover;background-repeat:no-repeat;overflow:hidden}
   .box-form .left .overlay{padding:30px;width:100%;height:100%;background:#ffe00396;overflow:hidden;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
@@ -45,11 +36,12 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   .box-form input{width:100%;padding:6px 8px;margin-top:0;font-size:16px;border:none;outline:none;border:1px solid #b0b3b9;margin-bottom:10px}
   .signInPage .box-form input {padding:10px;}
   .box-form .inputs{overflow:hidden}
+  .signInPage .login-image{margin-right: -16%;position: relative;z-index: 9;width: 190px;}
   .box-form button{font-size:16px;padding:12px 35px;display:inline-block;border:0;outline:0;background-image:linear-gradient(135deg,#FFE600 10%,#f2da00 100%)}
   .box-form button:hover{color: #333 !important;}
   .box-form .form-control-label{text-align: left;color: var(--black);margin-bottom: 5px;font-weight: var(--main-medium);font-size: 14px}
   .box-form h2{color: var(--black);}
-  .box-form.login-page input{margin-top: 10px;}
+  
 
   .OnSubmitCertify1 .container{border-radius: 20px}
   .card-0{background: linear-gradient(-18deg, rgb(255, 255, 255) 50%, var(--theme-color-yellow) 50%);color: var(--white);border: 0px}
@@ -60,6 +52,7 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
 
   .login-blue-bg .login-content h1{color:var(--black)}
   .login-blue-bg .login-content p{color:var(--black)}
+  
 
   .img{border:1px solid #ddd;padding:10px;width:50px;height:50px}
   .btn{margin:3px}
@@ -69,70 +62,26 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   .section-title{font-size:32px;font-weight:var(--main-medium);color:var(--black);mix-blend-mode:difference;text-align:center}
   .card{padding:20px}
 
-
   .NavbarWrapper{background: var(--white);}
   .logopart h1 {margin-left: 10px;}
   .logopart .img {padding: 4px 6px;width: 50px;height: 50px;}
   .form-control:focus, button:focus, button:focus:not(:focus-visible), button:focus-visible, .btn.btn-orange:focus, .btn.btn-orange:focus:not(:focus-visible), .btn.btn-orange:focus-visible {outline: none; border:1px solid #28a745 !important; box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;}
+  .login-welcome-message h1 span{font-size: 45px;}
+  .login-welcome-message h1{font-size: 26px;}
+  .login-content{width: 100%;}
+
+  .hombg{background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), no-repeat;
+    background-size: cover;background-position: center;height: 86vh;}
+  .hombg .section-title{color: var(--white);}
   
-  
-  
-/*-------------------------[Xtra block css]---------------------------*/
-  
+/*-------------------------[Xtra block css]---------------------------*/  
   input:focus, textarea:focus, select:focus{border-color: #ff80ff;box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(255, 100, 255, 0.5);}
-
-.create {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  background-color: var(--white);
-}
-.create label {
-  text-align: left;
-  display: block;
-}
-.create h2 {
-  font-size: 20px;
-  color: #070002;
-  margin-bottom: 10px;
-  background-color: var(--white)fff;
-}
-.create textarea, .create select {
-  width: 70%;
-  padding: 2px 2px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  display: block;
-}
-.create input {
-  width: 50%;
-  padding: 2px 2px;
-  margin: 2px 0;
-  border: 1px solid rgb(228, 218, 105);
-  box-sizing: border-box;
-  display: block;
-}
-
-.create button {
-  background: #FFE600;
-  color: #2E2E38;
-  border: 10px;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-right: 20px;
-  margin-bottom: 20px;
- 
-}
-
-.hombg{
-  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url('https://images.pexels.com/photos/5380594/pexels-photo-5380594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 86vh;
-}
-
+  .create{max-width:600px;margin:0 auto;text-align:center;background-color:var(--white)}
+  .create label{text-align:left;display:block}
+  .create h2{font-size:20px;color:#070002;margin-bottom:10px;background-color:var(--white)fff}
+  .create textarea,.create select{width:70%;padding:2px;margin:10px 0;border:1px solid #ddd;box-sizing:border-box;display:block}
+  .create input{width:50%;padding:2px;margin:2px 0;border:1px solid #e4da69;box-sizing:border-box;display:block}
+  .create button{background:#FFE600;color:#2E2E38;border:10px;padding:8px;border-radius:8px;cursor:pointer;margin-right:20px;margin-bottom:20px}
 
 /*-------------------------[media block]---------------------------*/
 
@@ -141,30 +90,32 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   }
   
   @media ( max-width : 1366px) {
+    .App .navbar .logopart h1{font-size: calc(.80rem + 1.5vw);}
   }
   
   @media ( max-width : 1240px) {
   }
   
   @media ( max-width : 1040px) {
+    .login-welcome-message h1 span {font-size: 32px;}
+    .login-welcome-message h1 {font-size: 19px;}
   }
   
   @media (min-width: 992px){
   .container, .container-lg, .container-md, .container-sm {max-width: 98%;}
   }
   
-  @media (max-width: 992px){
+  @media (max-width: 991px){
   .logopart h1 {font-size: calc(.75rem + 1.5vw);}
+  .login-welcome-message h1 span {font-size: 36px;}
   }
-
+  @media (max-width: 800px){
+  .login-welcome-message h1 span {font-size: 22px;}
+  .login-welcome-message h1 {font-size: 16px;}
+  }
   @media ( max-width : 768px) {
-    .logopart h1 {font-size: calc(0.50rem + 1.5vw);}
-    
-  .App .navbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    .logopart h1{font-size:calc(0.50rem + 1.5vw)}
+    .App .navbar{display:flex;align-items:center;justify-content:center}
   }    
   
   @media (min-width: 768px){
@@ -173,5 +124,10 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   
   @media (min-width: 576px){
   }
-  
+  @media (max-width: 600px){
+  .signInPage .login-image {width: 115px;}
+  .login-welcome-message h1 span {font-size: 26px;}
+  .login-welcome-message h1 {font-size: 18px;}
+  .login-blue-bg {padding: 14px;}
+  }
 

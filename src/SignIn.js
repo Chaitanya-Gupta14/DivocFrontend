@@ -3,7 +3,6 @@ import { Login } from "./backendCall.js";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
-
 export var authorized = false;
 const SignIn = () => {
   const history = useHistory();
@@ -77,13 +76,14 @@ const SignIn = () => {
       <div className="box-form login-page row h-100">
         <div className="col-12 col-md-6 col-lg-6 left">
           <div className="overlay">
+          <div className="login-image">
+                   <img src="images/signIn.png" className="img-fluid loginimg" alt="signIn" /> 
+                </div>
             <div className="login-blue-bg">
               <div className="login-content">
-                <div className="login-image">
-                  {/* <img src="images/login.png" className="img-fluid loginimg" /> */}
-                </div>
-                <div className="login-welcome-message">
-                  <h1>Welcome To Verifiable Credentialing System</h1>
+
+                <div className="login-welcome-message pb-3">
+                  <h1 className="flex-column d-flex"><span className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-3 mb-2 form-title">Welcome To</span> Verifiable Credentialing System</h1>
                 </div>
               </div>
             </div>
