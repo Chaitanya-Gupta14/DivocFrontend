@@ -33,7 +33,7 @@ const OnSubmitCertify2 = () => {
     const certify = () => {
         var data = JSON.stringify({
           "preEnrollmentCode": preEnrollmentCode,
-          "certificateId": certificateId,
+          // "certificateId": certificateId,
           "name": name,
           "dob": dob,
           "gender": gender,
@@ -45,10 +45,10 @@ const OnSubmitCertify2 = () => {
           "dose": dose,
           "dateOfVaccination": dateOfVaccination,
           "countryOfVaccination": countryOfVaccination,
-          "validUntil": validUntil,
+          // "validUntil": validUntil,
           "issuer": issuer,
           "issuanceDate": issuanceDate,
-          "validFrom": validFrom
+          // "validFrom": validFrom
         });
     
         transactionId = CertifyCall(data);
@@ -159,7 +159,7 @@ return (
                           <div className="form-group col-12"> 
                             <button type="submit" className="btn btnsubmit">Generate Transaction ID</button> 
                           </div>
-                      </div>
+                        </div>
                   </form>
               </div>
           </div>

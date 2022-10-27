@@ -7,8 +7,9 @@ import { useHistory } from "react-router-dom";
 import { authorized } from "./SignIn";
 import { CardData } from "./components/CardData";
 
+export var SchemaName = "";
 const Home = () => {
-  
+
   let Redirect = useHistory()
   // const token = JSON.parse(localStorage.getItem("user"));
   if(!authorized){
@@ -16,8 +17,8 @@ const Home = () => {
   }
       
   
-  function handleClick(index) {
-
+  function handleCertify(index,value) {
+    SchemaName = value;
     if(index === 0){
       Redirect.push("/HealthProfessional7")
       console.log("this is 1");
@@ -26,8 +27,12 @@ const Home = () => {
       Redirect.push("/NHAUIPCertificateSample")
       console.log("this is 2");
     }
-   
+    
     console.log('The link was clicked.');
+  }
+
+  function handleDownload(){
+    Redirect.push("/DownloadPage");
   }
 
   return (
@@ -40,8 +45,8 @@ const Home = () => {
               <div className="card text-center" key={index}>
                 <h5 className="card-title"> {value} </h5>
                 <div className="button-grp d-flex justify-content-center align-item-center h-100">
-                  <button className="btn btn-orange">Download</button>
-                  <button className="btn btn-orange" onClick={() => handleClick(index)}>Certify</button>
+                  <button className="btn btn-orange" onClick={handleDownload}>Download</button>
+                  <button className="btn btn-orange" onClick={() => handleCertify(index,value)}>Certify</button>
                 </div>
               </div>
             </div>

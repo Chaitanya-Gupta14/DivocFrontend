@@ -49,7 +49,7 @@ const OnSubmitCertify1 = () => {
         "validFrom": validFrom,
         "validUntil": validUntil
       });
-  
+      console.log((data))
       transactionId = CertifyCall(data);
     }
 
