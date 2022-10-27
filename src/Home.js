@@ -42,19 +42,12 @@ const Home = () => {
         <div className="d-flex justify-content-center align-item-stretch flex-wrap">
           {CardData.map((value, index) => (
             <div className="col-12 col-md-4 col-lg-4 p-2">
-<<<<<<< HEAD
+
               <div className="card text-center" key={index}>
                 <h5 className="card-title"> {value} </h5>
                 <div className="button-grp d-flex justify-content-center align-item-center h-100">
                   <button className="btn btn-orange" onClick={handleDownload}>Download</button>
                   <button className="btn btn-orange" onClick={() => handleCertify(index,value)}>Certify</button>
-=======
-              <div className="card text-center h-100" key={index}>
-                <h5 className="card-title"> {value} </h5> 
-                <div className="button-grp d-flex justify-content-center align-item-stretch mt-auto">
-                  <button className="btn btn-orange">Download</button>
-                  <button className="btn btn-orange" onClick={() => handleClick(index)}>Certify</button>
->>>>>>> 22c03d105222668d3f1c6c69f9b08a8940b3ec1d
                 </div>
               </div>
             </div>
