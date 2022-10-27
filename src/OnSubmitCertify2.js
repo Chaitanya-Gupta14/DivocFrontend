@@ -66,90 +66,90 @@ return (
                   <form className="form-card" onSubmit={handleSubmit}>
                       <div className="row justify-content-between text-left">
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">PreEnrollment Code:</label> 
+                            <label className="form-control-label px-0">PreEnrollment Code</label> 
                             <input type="text" className="form-control" value={preEnrollmentCode}
                               onChange={(e) => setPreEnrollmentCode(e.target.value)}/>
                           </div>
                           
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Certificate ID:</label> 
+                            <label className="form-control-label px-0">Certificate ID</label> 
                             <input type="text" className="form-control" value={certificateId} onChange={(e) => setCertificateId(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Name:</label> 
+                            <label className="form-control-label px-0">Name</label> 
                             <input type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">DOB:</label> 
+                            <label className="form-control-label px-0">DOB</label> 
                             <input type="text" className="form-control" value={dob} onChange={(e) => setDOB(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Gender:</label> 
+                            <label className="form-control-label px-0">Gender</label> 
                             <input type="text" className="form-control" value={gender} onChange={(e) => setGender(e.target.value)}/>
                           </div>
 
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Birth Reg Number:</label> 
+                            <label className="form-control-label px-0">Birth Reg Number</label> 
                             <input type="text" className="form-control" value={birthRegNumber} onChange={(e) => setBirthRegNumber(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Address:</label> 
+                            <label className="form-control-label px-0">Address</label> 
                             <input type="text" className="form-control" value={address}          onChange={(e) => setAddress(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Vaccine Type:</label> 
+                            <label className="form-control-label px-0">Vaccine Type</label> 
                             <input type="text" className="form-control" value={vaccineType} onChange={(e) => setVaccineType(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Vaccine Brand:</label> 
+                            <label className="form-control-label px-0">Vaccine Brand</label> 
                             <input type="text" className="form-control" value={vaccineBrand} onChange={(e) => setVaccineBrand(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Vaccine Batch No:</label> 
+                            <label className="form-control-label px-0">Vaccine Batch No</label> 
                             <input type="text" className="form-control" value={vaccineBatchNo} onChange={(e) => setVaccineBatchNo(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Dose:</label> 
+                            <label className="form-control-label px-0">Dose</label> 
                             <input type="text" className="form-control" value={dose} onChange={(e) => setDose(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Date of Vaccination:</label> 
+                            <label className="form-control-label px-0">Date of Vaccination</label> 
                             <input type="text" className="form-control" value={dateOfVaccination}onChange={(e) => setDateOfVaccination(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Country of Vaccination:</label> 
+                            <label className="form-control-label px-0">Country of Vaccination</label> 
                             <input type="text" className="form-control" value={countryOfVaccination}onChange={(e) => setCountryOfVaccination(e.target.value)} />
                           </div>
 
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Issuer:</label> 
+                            <label className="form-control-label px-0">Issuer</label> 
                             <input type="text" className="form-control" value={issuer} onChange={(e) => setIssuer(e.target.value)} />
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Issuance Date:</label> 
+                            <label className="form-control-label px-0">Issuance Date</label> 
                             <input type="text" className="form-control" value={issuanceDate} onChange={(e) => setIssuanceDate(e.target.value)} />
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Valid From:</label> 
+                            <label className="form-control-label px-0">Valid From</label> 
                             <input type="text" className="form-control" value={validFrom} onChange={(e) => setValidFrom(e.target.value)} />
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Valid Until:</label> 
+                            <label className="form-control-label px-0">Valid Until</label> 
                             <input type="text" className="form-control" value={validUntil} onChange={(e) => setValidUntil(e.target.value)} />
                           </div>
 

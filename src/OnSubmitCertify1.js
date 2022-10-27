@@ -65,50 +65,50 @@ return (
                   <form className="form-card" onSubmit={handleSubmit}>
                       <div className="row justify-content-between text-left">
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                          <label className="form-control-label px-0">Registration ID:</label> 
+                          <label className="form-control-label px-0">Registration ID</label> 
                           <input type="text" className="form-control" value={registrationId} onChange={(e) => setRegistrationId(e.target.value)}/>
                           </div>
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Certificate ID:</label> 
+                            <label className="form-control-label px-0">Certificate ID</label> 
                             <input type="text" className="form-control" value={certificateId} onChange={(e) => setCertificateId(e.target.value)}/> 
                           </div>
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Name:</label> 
+                            <label className="form-control-label px-0">Name</label> 
                             <input type="text" className="form-control" required value={name} onChange={(e) => setName(e.target.value)} /> 
                           </div>
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">DOB:</label> 
+                            <label className="form-control-label px-0">DOB</label> 
                             <input type="text" className="form-control" required value={dob} onChange={(e) => setDOB(e.target.value)} /> 
                           </div>
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Gender:</label> 
+                            <label className="form-control-label px-0">Gender</label> 
                             <input type="text" className="form-control" value={gender} onChange={(e) => setGender(e.target.value)}
                             />
                           </div>
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Registration Council:</label> 
+                            <label className="form-control-label px-0">Registration Council</label> 
                             <input type="text" className="form-control" required value={registrationCouncil} onChange={(e) => setRegistrationCouncil(e.target.value)} />
                           </div>
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Registration Date:</label> 
+                            <label className="form-control-label px-0">Registration Date</label> 
                             <input type="text" className="form-control" required value={registrationDate} onChange={(e) => setRegistrationDate(e.target.value)}
                             />
                           </div>
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Registration Expiry:</label> 
+                            <label className="form-control-label px-0">Registration Expiry</label> 
                             <input  type="text" className="form-control" value={registrationExpiry}
                               onChange={(e) => setRegistrationExpiry(e.target.value)}
                             />
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">System of Medicine:</label> 
+                            <label className="form-control-label px-0">System of Medicine</label> 
                             <input type="text" className="form-control" required value={systemOfMedicine} onChange={(e) => setSystemOfMedicine(e.target.value)}
                             />
                           </div>
                           
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">University:</label> 
+                            <label className="form-control-label px-0">University</label> 
                             <input
                               type="text"
                               className="form-control" 
@@ -119,7 +119,7 @@ return (
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Latest Qualification:</label> 
+                            <label className="form-control-label px-0">Latest Qualification</label> 
                             <input
                               type="text"
                               className="form-control" 
@@ -129,7 +129,7 @@ return (
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Degree Year:</label> 
+                            <label className="form-control-label px-0">Degree Year</label> 
                             <input
                               type="text"
                               className="form-control" 
@@ -140,7 +140,7 @@ return (
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Issuer:</label> 
+                            <label className="form-control-label px-0">Issuer</label> 
                             <input
                               type="text"
                               className="form-control" 
@@ -151,7 +151,7 @@ return (
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Issuance Date:</label> 
+                            <label className="form-control-label px-0">Issuance Date</label> 
                             <input
                               type="text"
                               className="form-control" 
@@ -162,7 +162,7 @@ return (
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Valid From:</label> 
+                            <label className="form-control-label px-0">Valid From</label> 
                             <input
                               type="text"
                               className="form-control" 
@@ -173,7 +173,7 @@ return (
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Valid Until:</label> 
+                            <label className="form-control-label px-0">Valid Until</label> 
                             <input
                                 type="text" className="form-control" 
                                 required
