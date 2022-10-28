@@ -9,7 +9,7 @@ ul{padding: 0;}
 ul, li{list-style-type: none;}
 /*-------------------------[variable]---------------------------*/
 
-body {font-family: var(--font-family-base);font-size: var(--font-family-base);line-height: 1.5;    color: var(--bodycolor);background-color: var(--theme-body-bg) !important}
+body {font-family: var(--font-family-base);font-size: var(--font-family-base);line-height: 1.5;    color: var(--bodycolor);background-color: var(--white) !important}
 a {text-decoration: none;color: var(--links);}
 a:hover {color: var(--orange);}
 i{ color: var(--orange);}
@@ -45,7 +45,8 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   
 
   .OnSubmitCertify1 .container, .OnSubmitCertify2 .container{border-radius: 20px}
-  .card-0{background: linear-gradient(-18deg, rgb(255, 255, 255) 50%, var(--theme-color-yellow) 50%);color: var(--white);border: 0px}
+  .card-0{background: linear-gradient(-18deg, rgb(255, 255, 255) 50%, var(--theme-color-yellow) 50%);color: var(--white);border: 0px;box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+    height: 100%;}
   .inner-card{margin: 79px 0px 70px 0px}
   .card-0{margin-top: 15px;margin-bottom: 15px}
   .card-1{border-radius: 17px;color: var(--black);box-shadow: 2px 4px 15px 0px rgb(0, 0, 0, 0.5) !important}
