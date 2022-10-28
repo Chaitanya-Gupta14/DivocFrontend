@@ -1,9 +1,15 @@
 import React from "react";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
+// import ReactTable from 'react-table';  
+// import TableContent from "./CertificatesTable";
 
 const OnSubmitDownload = () => {
     const [TransactionId, setTransactionId] = useState("");
-    
+    const Redirect = useHistory();
+    const handleList = () => {
+        Redirect.push("/ListCertificate");
+    }
 
 return(
     <div className="container-fluid px-1 py-3 mx-auto OnSubmitCertify1">
@@ -25,9 +31,19 @@ return(
                                 </div>
                                 <div className="row justify-content-end">
                                     <div className="form-group col-12"> 
-                                    <button type="submit" className="btn btnsubmit">Download</button> 
+                                        <button type="submit" className="btn btnsubmit">Download</button>
+                                        <button type="submit" className="btn btnsubmit" onClick={handleList}>List Certificates</button> 
                                     </div>
                                 </div>
+                                
+                                {/* <div>
+                                    <ReactTable  
+                                        data={TableContent.data}  
+                                        columns={TableContent.columns}  
+                                        defaultPageSize = {2}  
+                                        pageSizeOptions = {[2,4, 6]}  
+                                    /> 
+                                </div> */}
                             </div>
                         </form>
                     </div>

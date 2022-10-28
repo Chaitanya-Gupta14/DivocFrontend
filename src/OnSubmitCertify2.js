@@ -32,7 +32,7 @@ const OnSubmitCertify2 = () => {
     
     const certify = () => {
         var data = JSON.stringify({
-          "preEnrollmentCode": preEnrollmentCode,
+          // "preEnrollmentCode": preEnrollmentCode,
           // "certificateId": certificateId,
           "name": name,
           "dob": dob,

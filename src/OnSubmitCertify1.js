@@ -33,7 +33,7 @@ const OnSubmitCertify1 = () => {
     const certify = () => {
       var data = JSON.stringify({
         "registrationId": registrationId,
-        "certificateId": certificateId,
+        // "certificateId": certificateId,
         "name": name,
         "dob": dob,
         "gender": gender,
@@ -44,12 +44,14 @@ const OnSubmitCertify1 = () => {
         "latestQualification": latestQualification,
         "university": university,
         "degreeYear": degreeYear,
-        "issuer": issuer,
-        "issuanceDate": issuanceDate,
-        "validFrom": validFrom,
-        "validUntil": validUntil
+        // "issuer": issuer,
+        // "issuanceDate": issuanceDate,
+        "issuer": 'http://www.india.gov.in',
+        "issuanceDate": '2021-09-09T21:01:01.121Z',
+        // "validFrom": validFrom,
+        // "validUntil": validUntil
       });
-      console.log((data))
+      // console.log(data)
       transactionId = CertifyCall(data);
     }
 
