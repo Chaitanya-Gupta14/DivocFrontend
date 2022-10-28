@@ -7,8 +7,9 @@ import { useHistory } from "react-router-dom";
 import { authorized } from "./SignIn";
 import { CardData } from "./components/CardData";
 
+export var SchemaName = "";
 const Home = () => {
-  
+
   let Redirect = useHistory()
   // const token = JSON.parse(localStorage.getItem("user"));
   if(!authorized){
@@ -16,8 +17,8 @@ const Home = () => {
   }
       
   
-  function handleClick(index) {
-
+  function handleCertify(index,value) {
+    SchemaName = value;
     if(index === 0){
       Redirect.push("/HealthProfessional7")
       console.log("this is 1");
@@ -26,8 +27,12 @@ const Home = () => {
       Redirect.push("/NHAUIPCertificateSample")
       console.log("this is 2");
     }
-   
+    
     console.log('The link was clicked.');
+  }
+
+  function handleDownload(){
+    Redirect.push("/DownloadPage");
   }
 
   return (
@@ -37,11 +42,12 @@ const Home = () => {
         <div className="d-flex justify-content-center align-item-stretch flex-wrap">
           {CardData.map((value, index) => (
             <div className="col-12 col-md-4 col-lg-4 p-2">
-              <div className="card text-center h-100" key={index}>
-                <h5 className="card-title"> {value} </h5> 
-                <div className="button-grp d-flex justify-content-center align-item-stretch mt-auto">
-                  <button className="btn btn-orange">Download</button>
-                  <button className="btn btn-orange" onClick={() => handleClick(index)}>Certify</button>
+
+              <div className="card text-center" key={index}>
+                <h5 className="card-title"> {value} </h5>
+                <div className="button-grp d-flex justify-content-center align-item-center h-100">
+                  <button className="btn btn-orange" onClick={handleDownload}>Download</button>
+                  <button className="btn btn-orange" onClick={() => handleCertify(index,value)}>Certify</button>
                 </div>
               </div>
             </div>

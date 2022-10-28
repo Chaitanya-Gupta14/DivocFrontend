@@ -8,6 +8,7 @@ import OnSubmitCertify1 from './OnSubmitCertify1';
 import OnSubmitCertify2 from './OnSubmitCertify2';
 import SignIn from './SignIn';
 import Home from './Home';
+import OnSubmitDownload from './OnSubmitDownload';
 
 
 function App() {
@@ -38,6 +39,10 @@ function App() {
 
             <Route path="/NHAUIPCertificateSample">
               <OnSubmitCertify2 />
+            </Route>
+
+            <Route path="/DownloadPage">
+              <OnSubmitDownload />
             </Route>
 
            {/* <Route path="/immunization">

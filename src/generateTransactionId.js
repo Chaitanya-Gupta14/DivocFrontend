@@ -1,15 +1,16 @@
 import axios from "axios";
+import { SchemaName } from "./Home";
 // import { toast } from "react-toastify";
-const API_URL = 'http://localhost:8013';
+const API_URL = 'http://localhost:8013/certify/';
 
 export const CertifyCall = (body) => {
   var config = {
           method: 'post',
-          url: API_URL+"/certify",
+          url: API_URL+SchemaName,
     
-          data: {body},
+          data: body,
           headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2NjYyODgxNjAsImlhdCI6MTY2NjI3MDE2MH0.AdrZ-RXPcqpeZjpuKPyqc0WI_JfW6Oi23x-TZwxnDe6sa-0sEmLvH0mGrBz8w2zXGi4KUkMrezd3GsZ7YDkBaw',
+            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2NjYzNjc5NjQsImlhdCI6MTY2NjM0OTk2NH0.aPYb-epOFQvqn2LfG-gDtnwnP_shzvw2AWJhBHox3DBzJqV8Y0q3URDTROE7-8XTle7Ycnjs3onE0Lro5rswMA',
             'Content-Type': 'application/json'
           },
         };
