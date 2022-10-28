@@ -9,6 +9,7 @@ import OnSubmitCertify2 from './OnSubmitCertify2';
 import SignIn from './SignIn';
 import Home from './Home';
 import OnSubmitDownload from './OnSubmitDownload';
+import ListCertificates from './CertificatesTable';
 
 
 function App() {
@@ -45,12 +46,12 @@ function App() {
               <OnSubmitDownload />
             </Route>
 
+            <Route path="/ListCertificate">
+              <ListCertificates />
+            </Route>
+
            {/* <Route path="/immunization">
               <Create />
-            </Route>
-            
-            <Route path="/blogs/:id">
-              <BlogDetails />
             </Route>
             
             <Route path="/hp">
