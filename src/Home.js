@@ -36,7 +36,7 @@ const Home = () => {
   }
 
   return (
-    <div className="container-fluid section-padding hombg" style={{backgroundImage:"url(/images/homepage-bg.jpeg)"}}>
+    <div className="container-fluid section-padding hombg">
       <div className="row">
         <h2 className="section-title">Choose Schema</h2>
         <div className="d-flex justify-content-center align-item-stretch flex-wrap">
