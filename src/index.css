@@ -116,10 +116,10 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
     .NavbarWrapper {position: relative;}
     .signInPage .login-page {padding-top: 0;}
     .hombg {padding-top: 40px;height: auto;}
-    .OnSubmitCertify1, .OnSubmitCertify2 {padding-top: 0;}
     .box-form button {padding: 12px 17px;}
     .login-page{height: auto !important;}
     .box-form .right {padding: 20px;}
+    .py-3.OnSubmitCertify1, .py-3.OnSubmitCertify2 {padding-top: 20px !important;}
   }    
   
   @media (min-width: 768px){
