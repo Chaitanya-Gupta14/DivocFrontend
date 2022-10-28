@@ -76,9 +76,7 @@ const SignIn = () => {
       <div className="box-form login-page row h-100">
         <div className="col-12 col-md-6 col-lg-6 left">
           <div className="overlay">
-          <div className="login-image">
-                   <img src="images/signIn.png" className="img-fluid loginimg" alt="signIn" /> 
-                </div>
+
             <div className="login-blue-bg">
               <div className="login-content">
 

@@ -4,8 +4,8 @@ import logo from "./header-logo-dark.svg";
 const Navbar = () => {
   return (
     <nav className="navbar">
-        <div className="d-flex justify-content-lg-between justify-content-sm-center align-items-center flex-wrap w-100">
-            <div className="logopart d-flex justify-content-lg-start justify-content-sm-center justify-content-xs-center align-items-center">
+        <div className="d-flex justify-content-lg-between justify-content-center align-items-center flex-wrap w-100">
+            <div className="logopart d-flex justify-content-lg-start justify-content-center justify-content-xs-center align-items-center">
               <div className="img">
                 <img alt="logo" src={logo} />
               </div>

@@ -56,7 +56,7 @@ const OnSubmitCertify2 = () => {
 
 return (
 
-  <div className="container-fluid px-1 py-3 mx-auto OnSubmitCertify1">
+  <div className="container-fluid px-1 py-3 mx-auto OnSubmitCertify2">
     <div className="container card-0 justify-content-center">
       <div className="row d-flex justify-content-center">
           <div className="col-xl-10 col-lg-10 col-md-10 col-11 text-center mb-4 flex-column">
