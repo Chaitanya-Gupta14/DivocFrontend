@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-import { CertifyCall } from "./generateTransactionId";
+import { CertifyCall } from "../service/generateTransactionId";
 
-export var transactionId;
+
 const OnSubmitCertify1 = () => {
     const [registrationId, setRegistrationId] = useState("");
-    const [certificateId,setCertificateId] = useState("");
+    // const [certificateId,setCertificateId] = useState("");
     const [name,setName] = useState("");
     const [dob,setDOB] = useState("");
     const [gender,setGender] = useState("");
@@ -21,13 +21,14 @@ const OnSubmitCertify1 = () => {
     const [issuanceDate,setIssuanceDate] = useState("");
     const [validFrom,setValidFrom] = useState("");
     const [validUntil,setValidUntil] = useState("");
-  
+
+    var transactionId;
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      certify();
+      transactionId = certify();
       
-      console.log();
+      console.log(transactionId);
     }
 
     const certify = () => {
@@ -38,12 +39,12 @@ const OnSubmitCertify1 = () => {
         "dob": dob,
         "gender": gender,
         "registrationCouncil": registrationCouncil,
-        "registrationDate": registrationDate,
-        "registrationExpiry": registrationExpiry,
+        "registrationDate": '1996-12-29',
+        "registrationExpiry": '1996-12-29',
         "systemOfMedicine": systemOfMedicine,
         "latestQualification": latestQualification,
         "university": university,
-        "degreeYear": degreeYear,
+        "degreeYear": '2022',
         // "issuer": issuer,
         // "issuanceDate": issuanceDate,
         "issuer": 'http://www.india.gov.in',
@@ -51,8 +52,8 @@ const OnSubmitCertify1 = () => {
         // "validFrom": validFrom,
         // "validUntil": validUntil
       });
-      // console.log(data)
-      transactionId = CertifyCall(data);
+      
+      return CertifyCall(data);
     }
 
 return (
@@ -62,17 +63,13 @@ return (
       <div className="row d-flex justify-content-center">
           <div className="col-xl-10 col-lg-10 col-md-10 col-11 text-center mb-4 flex-column">
               <h2 className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-3 mb-2 form-title">Health Professional</h2>   
-              <p className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-0 mb-3 form-title">Transaction id is: {transactionId}</p>         
+              {/* <p className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-0 mb-3 form-title">Transaction id is: {transactionId}</p>          */}
               <div className="card box-form">
                   <form className="form-card" onSubmit={handleSubmit}>
                       <div className="row justify-content-between text-left">
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
                           <label className="form-control-label px-0">Registration ID</label> 
                           <input type="text" className="form-control" value={registrationId} onChange={(e) => setRegistrationId(e.target.value)}/>
-                          </div>
-                          <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Certificate ID</label> 
-                            <input type="text" className="form-control" value={certificateId} onChange={(e) => setCertificateId(e.target.value)}/> 
                           </div>
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
                             <label className="form-control-label px-0">Name</label> 

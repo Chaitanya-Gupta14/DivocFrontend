@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-import { CertifyCall } from "./generateTransactionId";
+import { CertifyCall } from "../service/generateTransactionId";
 
-export var transactionId;
+
 const OnSubmitCertify2 = () => {
     const [preEnrollmentCode, setPreEnrollmentCode] = useState("");
-    const [certificateId,setCertificateId] = useState("");
+    // const [certificateId,setCertificateId] = useState("");
     const [name,setName] = useState("");
     const [dob,setDOB] = useState("");
     const [gender,setGender] = useState("");
@@ -23,11 +23,12 @@ const OnSubmitCertify2 = () => {
     const [issuanceDate,setIssuanceDate] = useState("");
     const [validFrom,setValidFrom] = useState("");
    
-    
+    var transactionId;
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        certify()
-        console.log();
+        transactionId = certify()
+        console.log(transactionId);
       }
     
     const certify = () => {
@@ -51,8 +52,9 @@ const OnSubmitCertify2 = () => {
           // "validFrom": validFrom
         });
     
-        transactionId = CertifyCall(data);
+        return CertifyCall(data);
       }
+      
 
 return (
 
@@ -61,7 +63,7 @@ return (
       <div className="row d-flex justify-content-center">
           <div className="col-xl-10 col-lg-10 col-md-10 col-11 text-center mb-4 flex-column">
               <h2 className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-3 mb-2 form-title">NHAUIP Certificate</h2>   
-              <p className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-0 mb-3 form-title">Transaction id is: {transactionId}</p>         
+              {/* <p className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-0 mb-3 form-title">Transaction id is: {transactionId}</p>          */}
               <div className="card box-form">
                   <form className="form-card" onSubmit={handleSubmit}>
                       <div className="row justify-content-between text-left">
@@ -71,10 +73,10 @@ return (
                               onChange={(e) => setPreEnrollmentCode(e.target.value)}/>
                           </div>
                           
-                          <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
+                          {/* <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
                             <label className="form-control-label px-0">Certificate ID</label> 
                             <input type="text" className="form-control" value={certificateId} onChange={(e) => setCertificateId(e.target.value)}/>
-                          </div>
+                          </div> */}
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
                             <label className="form-control-label px-0">Name</label> 

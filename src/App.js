@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import Create from './Immunization';
-import OnSubmitCertify1 from './OnSubmitCertify1';
-import OnSubmitCertify2 from './OnSubmitCertify2';
-import SignIn from './SignIn';
-import Home from './Home';
-import OnSubmitDownload from './OnSubmitDownload';
-import ListCertificates from './CertificatesTable';
+import OnSubmitCertify1 from './components/OnSubmitCertify1';
+import OnSubmitCertify2 from './components/OnSubmitCertify2';
+import SignIn from './components/SignIn';
+import Home from './components/Home';
+import OnSubmitDownload from './components/OnSubmitDownload';
+import ListCertificates from './components/CertificatesTable';
 
 
 function App() {

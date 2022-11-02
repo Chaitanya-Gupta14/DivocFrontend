@@ -1,13 +1,24 @@
 import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-// import ReactTable from 'react-table';  
-// import TableContent from "./CertificatesTable";
+import { ListCertificates } from "../service/listCertificateTable";
+import TableContent from "./CertificatesTable";
+import { SchemaName } from "./Home";
+
 
 const OnSubmitDownload = () => {
+    
     const [TransactionId, setTransactionId] = useState("");
     const Redirect = useHistory();
-    const handleList = () => {
+    let name = "";
+    if(SchemaName === "HealthProfessional7")
+        name = "Health Professional Certificate";
+    else
+        name = "NHAUIP Certificate";
+    const handleList = (e) => {
+        e.preventDefault();
+        ListCertificates();
+        TableContent();
         Redirect.push("/ListCertificate");
     }
 
@@ -16,7 +27,7 @@ return(
         <div className="container card-0 justify-content-center">
             <div className="row d-flex justify-content-center">
                 <div className="col-xl-10 col-lg-10 col-md-10 col-11 text-center mb-4 flex-column"> 
-                    <h2 className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-3 mb-2 form-title">NHAUIP Certificate</h2> 
+                    <h2 className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-3 mb-2 form-title">{name}</h2> 
                     <div className="card box-form">
                         <form className="form-card">
                             <div className="row justify-content-between text-left">

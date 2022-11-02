@@ -15,12 +15,9 @@ var config = {
     .then(function (response) {
 
       let parsedResponse = JSON.parse(JSON.stringify(response.data));
-      //console.log(parsedResponse);
-      //console.log(parsedResponse.schemas.length);
       for(let index = 0; index<parsedResponse.schemas.length; index++)
       {
         CardData[index] = (parsedResponse.schemas[index].name);
-        //console.log(">>>>>>>>>>>>>>>>>>>card data>>>>>>>>>>..",CardData[index])
       }
       
     })
