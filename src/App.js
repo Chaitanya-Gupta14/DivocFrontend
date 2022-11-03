@@ -1,9 +1,7 @@
 import Navbar from './Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import Home from './Home';
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import Create from './Immunization';
+
 import OnSubmitCertify1 from './components/OnSubmitCertify1';
 import OnSubmitCertify2 from './components/OnSubmitCertify2';
 import SignIn from './components/SignIn';

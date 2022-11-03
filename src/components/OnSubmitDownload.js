@@ -19,7 +19,7 @@ const OnSubmitDownload = () => {
 
     const handleDownload = (e) => {
         e.preventDefault();
-        DownloadCertificate();
+        DownloadCertificate(CertificateId);
     }
 
     const handleList = (e) => {
