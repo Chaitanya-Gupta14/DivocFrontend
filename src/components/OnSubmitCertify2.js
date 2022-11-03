@@ -5,7 +5,7 @@ import { CertifyCall } from "../service/generateTransactionId";
 
 
 const OnSubmitCertify2 = () => {
-    const [preEnrollmentCode, setPreEnrollmentCode] = useState("");
+    // const [preEnrollmentCode, setPreEnrollmentCode] = useState("");
     // const [certificateId,setCertificateId] = useState("");
     // const [name,setName] = useState("");
     // const [dob,setDOB] = useState("");
@@ -97,11 +97,12 @@ return (
               <div className="card box-form">
                   <form className="form-card" onSubmit={handleSubmit}>
                       <div className="row justify-content-between text-left">
-                          <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
+
+                          {/* <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
                             <label className="form-control-label px-0">PreEnrollment Code</label> 
                             <input type="text" className="form-control" value={preEnrollmentCode}
                               onChange={(e) => setPreEnrollmentCode(e.target.value)}/>
-                          </div>
+                          </div> */}
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
                             <label className="form-control-label px-0">Name</label> 
