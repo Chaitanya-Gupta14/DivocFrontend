@@ -1,5 +1,5 @@
 import axios from "axios";
-import { SchemaName } from "./Home";
+import { SchemaName } from "../components/Home";
 // import { toast } from "react-toastify";
 const API_URL = 'http://localhost:8013/certify/';
 
@@ -10,7 +10,7 @@ export const CertifyCall = (body) => {
     
           data: body,
           headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2NjY5NDcxNTAsImlhdCI6MTY2NjkyOTE1MH0.pcWJkDFwjYUFacCyuYHAXImmwcaQ1vsi4MiZhwZGy9-QbTge6RW1Rv7FpJVDl_gXF4IcaFuqkF8ChNjBvKMqlA',
+            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkaXZvY3VzZXIiLCJleHAiOjE2Njc0MDM0NTIsImlhdCI6MTY2NzM4NTQ1Mn0.187TM0IQ-9IhrRmKBMzN6fvclkUQyRe4C5LKCjVNaYkni9-TljCruP2CLBbl9dgZ4hO78v4IWVMtFJwy6vf2Ig',
             'Content-Type': 'application/json'
           },
         };
