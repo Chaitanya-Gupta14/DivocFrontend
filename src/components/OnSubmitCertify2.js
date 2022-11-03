@@ -7,21 +7,35 @@ import { CertifyCall } from "../service/generateTransactionId";
 const OnSubmitCertify2 = () => {
     const [preEnrollmentCode, setPreEnrollmentCode] = useState("");
     // const [certificateId,setCertificateId] = useState("");
+    // const [name,setName] = useState("");
+    // const [dob,setDOB] = useState("");
+    // const [gender,setGender] = useState("");
+    // const [birthRegNumber,setBirthRegNumber] = useState("");
+    // const [address,setAddress] = useState("");
+    // const [vaccineType,setVaccineType] = useState("");
+    // const [vaccineBrand,setVaccineBrand] = useState("");
+    // const [vaccineBatchNo,setVaccineBatchNo] = useState("");
+    // const [dose,setDose] = useState("");
+    // const [dateOfVaccination,setDateOfVaccination] = useState("");
+    // const [countryOfVaccination,setCountryOfVaccination] = useState("");
+    // const [validUntil,setValidUntil] = useState("");
+    // const [issuer,setIssuer] = useState("");
+    // const [issuanceDate,setIssuanceDate] = useState("");
+    // const [validFrom,setValidFrom] = useState("");
+
     const [name,setName] = useState("");
     const [dob,setDOB] = useState("");
     const [gender,setGender] = useState("");
-    const [birthRegNumber,setBirthRegNumber] = useState("");
-    const [address,setAddress] = useState("");
-    const [vaccineType,setVaccineType] = useState("");
-    const [vaccineBrand,setVaccineBrand] = useState("");
-    const [vaccineBatchNo,setVaccineBatchNo] = useState("");
-    const [dose,setDose] = useState("");
-    const [dateOfVaccination,setDateOfVaccination] = useState("");
-    const [countryOfVaccination,setCountryOfVaccination] = useState("");
-    const [validUntil,setValidUntil] = useState("");
+    const [registrationId,setRegistrationId] = useState('');
+    const [registrationCouncil,setRegistrationCouncil] = useState("");
+    const [latestQualification,setLatestQualification] = useState("");
+    const [university,setUniversity] = useState("");
+    const [degreeYear,setDegreeYear] = useState("");
+    const [systemOfMedicine,setSystemOfMedicine] = useState("");
+    const [registrationDate,setRegistrationDate] = useState("");
+    const [registrationExpiry,setRegistrationExpiry] = useState("");
     const [issuer,setIssuer] = useState("");
     const [issuanceDate,setIssuanceDate] = useState("");
-    const [validFrom,setValidFrom] = useState("");
    
     var transactionId;
 
@@ -32,36 +46,36 @@ const OnSubmitCertify2 = () => {
       }
     
     const certify = () => {
-        var data = JSON.stringify({
-          // "preEnrollmentCode": preEnrollmentCode,
-          // "certificateId": certificateId,
-          "name": name,
-          "dob": dob,
-          "gender": gender,
-          "birthRegNumber": birthRegNumber,
-          "address": address,
-          "vaccineType": vaccineType,
-          "vaccineBrand": vaccineBrand,
-          "vaccineBatchNo": vaccineBatchNo,
-          "dose": dose,
-          "dateOfVaccination": dateOfVaccination,
-          "countryOfVaccination": countryOfVaccination,
-          // "validUntil": validUntil,
-          "issuer": issuer,
-          "issuanceDate": issuanceDate,
-          // "validFrom": validFrom
-        });
-        console.log(data)
+        // var data = JSON.stringify({
+        // "preEnrollmentCode": preEnrollmentCode,
+        // "certificateId": certificateId,
+        //   "name": name,
+        //   "dob": dob,
+        //   "gender": gender,
+        //   "birthRegNumber": birthRegNumber,
+        //   "address": address,
+        //   "vaccineType": vaccineType,
+        //   "vaccineBrand": vaccineBrand,
+        //   "vaccineBatchNo": vaccineBatchNo,
+        //   "dose": dose,
+        //   "dateOfVaccination": dateOfVaccination,
+        //   "countryOfVaccination": countryOfVaccination,
+        //   // "validUntil": validUntil,
+        //   "issuer": issuer,
+        //   "issuanceDate": issuanceDate,
+        //   // "validFrom": validFrom
+        // });
+        // console.log(data)
         var data2 = JSON.stringify({
-          "name": "swathi-1",
+          "name": name,
           "dob": "1996-11-29",
           "registrationId": "123456",
-          "gender": "female",
-          "registrationCouncil": "Karnataka",
-          "latestQualification": "quali",
-          "university": "Test university",
+          "gender": gender,
+          "registrationCouncil": registrationCouncil,
+          "latestQualification": latestQualification,
+          "university": university,
           "degreeYear": "2019",
-          "systemOfMedicine": "test system",
+          "systemOfMedicine": systemOfMedicine,
           "registrationDate": "2021-09-09",
           "registrationExpiry": "2022-09-09",
           "issuer": "http://www.india.gov.in",
@@ -106,43 +120,43 @@ return (
 
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Birth Reg Number</label> 
-                            <input type="text" className="form-control" value={birthRegNumber} onChange={(e) => setBirthRegNumber(e.target.value)}/>
+                            <label className="form-control-label px-0">Registration Id</label> 
+                            <input type="text" className="form-control" value={registrationId} onChange={(e) => setRegistrationId(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Address</label> 
-                            <input type="text" className="form-control" value={address}          onChange={(e) => setAddress(e.target.value)}/>
+                            <label className="form-control-label px-0">Registration Council</label> 
+                            <input type="text" className="form-control" value={registrationCouncil}          onChange={(e) => setRegistrationCouncil(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Vaccine Type</label> 
-                            <input type="text" className="form-control" value={vaccineType} onChange={(e) => setVaccineType(e.target.value)}/>
+                            <label className="form-control-label px-0">Latest Qualification</label> 
+                            <input type="text" className="form-control" value={latestQualification} onChange={(e) => setLatestQualification(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Vaccine Brand</label> 
-                            <input type="text" className="form-control" value={vaccineBrand} onChange={(e) => setVaccineBrand(e.target.value)}/>
+                            <label className="form-control-label px-0">university</label> 
+                            <input type="text" className="form-control" value={university} onChange={(e) => setUniversity(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Vaccine Batch No</label> 
-                            <input type="text" className="form-control" value={vaccineBatchNo} onChange={(e) => setVaccineBatchNo(e.target.value)}/>
+                            <label className="form-control-label px-0">Degree Year</label> 
+                            <input type="text" className="form-control" value={degreeYear} onChange={(e) => setDegreeYear(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Dose</label> 
-                            <input type="text" className="form-control" value={dose} onChange={(e) => setDose(e.target.value)}/>
+                            <label className="form-control-label px-0">System Of Medicine</label> 
+                            <input type="text" className="form-control" value={systemOfMedicine} onChange={(e) => setSystemOfMedicine(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Date of Vaccination</label> 
-                            <input type="text" className="form-control" value={dateOfVaccination}onChange={(e) => setDateOfVaccination(e.target.value)}/>
+                            <label className="form-control-label px-0">Registration Date</label> 
+                            <input type="text" className="form-control" value={registrationDate}onChange={(e) => setRegistrationDate(e.target.value)}/>
                           </div>
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Country of Vaccination</label> 
-                            <input type="text" className="form-control" value={countryOfVaccination}onChange={(e) => setCountryOfVaccination(e.target.value)} />
+                            <label className="form-control-label px-0">Registration Expiry</label> 
+                            <input type="text" className="form-control" value={registrationExpiry}onChange={(e) => setRegistrationExpiry(e.target.value)} />
                           </div>
 
 
@@ -156,7 +170,7 @@ return (
                             <input type="text" className="form-control" value={issuanceDate} onChange={(e) => setIssuanceDate(e.target.value)} />
                           </div>
 
-                          <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
+                          {/* <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
                             <label className="form-control-label px-0">Valid From</label> 
                             <input type="text" className="form-control" value={validFrom} onChange={(e) => setValidFrom(e.target.value)} />
                           </div>
@@ -164,7 +178,7 @@ return (
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
                             <label className="form-control-label px-0">Valid Until</label> 
                             <input type="text" className="form-control" value={validUntil} onChange={(e) => setValidUntil(e.target.value)} />
-                          </div>
+                          </div> */}
 
                         </div>
                       
