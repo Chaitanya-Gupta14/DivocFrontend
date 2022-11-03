@@ -10,11 +10,11 @@ export const CertifyCall = (body) => {
     
           data: body,
           headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkaXZvY3VzZXIiLCJleHAiOjE2Njc0MDM0NTIsImlhdCI6MTY2NzM4NTQ1Mn0.187TM0IQ-9IhrRmKBMzN6fvclkUQyRe4C5LKCjVNaYkni9-TljCruP2CLBbl9dgZ4hO78v4IWVMtFJwy6vf2Ig',
+            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFWVVzZXIiLCJleHAiOjE2Njc0OTU4ODksImlhdCI6MTY2NzQ3Nzg4OX0.x_gnWpttJhD3vpBG7cR0szmIAzv4TiHT32W1GYHv0-1B4GEfkOLjAmdaoyWyaAzHoEVy5Kzj81MxTXht8UuBoQ',
             'Content-Type': 'application/json'
           },
         };
-    
+
   return axios(config)
       .then((response) => {
       if (response.data) {
