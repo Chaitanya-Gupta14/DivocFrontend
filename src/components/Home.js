@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 //import { CardData } from "./components/CardData";
 //import qs from 'qs';
 import { authorized } from "./SignIn";
-import { CardData } from "./CardData";
+import { CardData } from "../service/CardData";
 
 export var SchemaName = "";
 const Home = () => {
@@ -36,6 +36,16 @@ const Home = () => {
     Redirect.push("/DownloadPage");
   }
 
+  function handleUpdate(){
+    
+    Redirect.push("/UpdatePage");
+  }
+
+  function handleRevoke(){
+    
+    Redirect.push("/RevokePage");
+  }
+
   return (
     <div className="container-fluid section-padding hombg">
       <div className="row">
@@ -48,6 +58,8 @@ const Home = () => {
                 <div className="button-grp d-flex flex-wrap justify-content-center align-item-center mt-auto">
                   <button className="btn btn-orange" onClick={() => handleCertify(index,value)}>Certify</button>
                   <button className="btn btn-orange" onClick={() => handleDownload(value)}>Download</button>
+                  <button className="btn btn-orange" onClick={handleUpdate}>Update Certificate</button>
+                  <button className="btn btn-orange" onClick={handleRevoke}>Revoke Certificate</button>
                 </div>
               </div>
             </div>

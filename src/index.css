@@ -139,17 +139,19 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
 
   /* These below are temporary just for table (28-10-2022) */
    
+  table, th, td {
+    border: 3px solid #FFE600;
+  }
+
+  th, td {
+    border-bottom: 1px solid #000;
+  }
+
   table {
-    border: 5px solid forestgreen;
-    width: 800px;
-    height: 200px;
+    width: 600px;
+    height: 100px;
     margin-left: auto;  
     margin-right: auto;
-  }
-    
-  th,td {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
   }
     
   

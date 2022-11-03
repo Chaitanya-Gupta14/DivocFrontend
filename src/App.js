@@ -10,6 +10,8 @@ import SignIn from './components/SignIn';
 import Home from './components/Home';
 import OnSubmitDownload from './components/OnSubmitDownload';
 import ListCertificates from './components/CertificatesTable';
+import OnSubmitUpdate from './components/OnSubmitUpdate';
+import OnSubmitRevoke from './components/OnSubmitRevoke';
 
 
 function App() {
@@ -44,6 +46,14 @@ function App() {
 
             <Route path="/DownloadPage">
               <OnSubmitDownload />
+            </Route>
+
+            <Route path="/UpdatePage">
+              <OnSubmitUpdate />
+            </Route>
+
+            <Route path="/RevokePage">
+              <OnSubmitRevoke />
             </Route>
 
             <Route path="/ListCertificate">

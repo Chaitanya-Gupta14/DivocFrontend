@@ -186,7 +186,7 @@ return (
                       
                         <div className="row justify-content-end">
                           <div className="form-group col-12"> 
-                            <button type="submit" className="btn btnsubmit">Generate Transaction ID</button> 
+                            <button type="submit" className="btn btnsubmit">Certify</button> 
                           </div>
                       </div>
                   </form>

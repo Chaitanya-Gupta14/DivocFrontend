@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { DownloadCertificate } from "../service/DownloadCertificate";
 import { ListCertificates } from "../service/listCertificateTable";
 import TableContent from "./CertificatesTable";
 import { SchemaName } from "./Home";
@@ -8,13 +9,19 @@ import { SchemaName } from "./Home";
 
 const OnSubmitDownload = () => {
     
-    const [TransactionId, setTransactionId] = useState("");
+    const [CertificateId, setCertificateId] = useState("");
     const Redirect = useHistory();
     let name = "";
     if(SchemaName === "HealthProfessional7")
         name = "Health Professional Certificate";
     else
         name = "NHAUIP Certificate";
+
+    const handleDownload = (e) => {
+        e.preventDefault();
+        DownloadCertificate();
+    }
+
     const handleList = (e) => {
         e.preventDefault();
         ListCertificates();
@@ -36,13 +43,13 @@ return(
                                     <input 
                                     type="text" 
                                     className="form-control" 
-                                    value= {TransactionId}
-                                    onChange={(e) => setTransactionId(e.target.value)}
+                                    value= {CertificateId}
+                                    onChange={(e) => setCertificateId(e.target.value)}
                                     />
                                 </div>
                                 <div className="row justify-content-end">
                                     <div className="form-group col-12"> 
-                                        <button type="submit" className="btn btnsubmit">Download</button>
+                                        <button type="submit" className="btn btnsubmit" onClick={handleDownload}>Download</button>
                                         <button type="submit" className="btn btnsubmit" onClick={handleList}>List Certificates</button> 
                                     </div>
                                 </div>

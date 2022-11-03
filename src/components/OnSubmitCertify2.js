@@ -51,8 +51,24 @@ const OnSubmitCertify2 = () => {
           "issuanceDate": issuanceDate,
           // "validFrom": validFrom
         });
+        console.log(data)
+        var data2 = JSON.stringify({
+          "name": "swathi-1",
+          "dob": "1996-11-29",
+          "registrationId": "123456",
+          "gender": "female",
+          "registrationCouncil": "Karnataka",
+          "latestQualification": "quali",
+          "university": "Test university",
+          "degreeYear": "2019",
+          "systemOfMedicine": "test system",
+          "registrationDate": "2021-09-09",
+          "registrationExpiry": "2022-09-09",
+          "issuer": "http://www.india.gov.in",
+          "issuanceDate": "2021-09-09T21:01:01.121Z"
+      })
     
-        return CertifyCall(data);
+        return CertifyCall(data2);
       }
       
 
@@ -72,11 +88,6 @@ return (
                             <input type="text" className="form-control" value={preEnrollmentCode}
                               onChange={(e) => setPreEnrollmentCode(e.target.value)}/>
                           </div>
-                          
-                          {/* <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                            <label className="form-control-label px-0">Certificate ID</label> 
-                            <input type="text" className="form-control" value={certificateId} onChange={(e) => setCertificateId(e.target.value)}/>
-                          </div> */}
 
                           <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
                             <label className="form-control-label px-0">Name</label> 
@@ -159,7 +170,7 @@ return (
                       
                         <div className="row justify-content-end">
                           <div className="form-group col-12"> 
-                            <button type="submit" className="btn btnsubmit">Generate Transaction ID</button> 
+                            <button type="submit" className="btn btnsubmit">Certify</button> 
                           </div>
                         </div>
                   </form>
