@@ -31,18 +31,25 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   .box-form .left{color:var(--white);background-size:cover;background-repeat:no-repeat;overflow:hidden;    padding: 0;}
   .box-form .left .overlay{padding:30px;width:100%;height:100%;background:#ffe00396;overflow:hidden;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
   .box-form div{height:auto}
-  .box-form{background:var(--white);border-radius:10px;overflow:hidden;display:flex;flex:1 1 100%;align-items:stretch;justify-content:space-between}
+  .box-form{background:var(--white);border-radius:10px;display:flex;flex:1 1 100%;align-items:stretch;justify-content:space-between}
   .box-form .right{padding:40px;overflow:hidden;display:flex;flex-direction:column;align-items:stretch;justify-content:center}
   .box-form h2{font-size:50px;line-height:normal;margin-bottom:24px}
   .box-form input{width:100%;padding:6px 8px;margin-top:0;font-size:16px;border:none;outline:none;border:1px solid #b0b3b9;margin-bottom:10px}
   .signInPage .box-form input {padding:10px;}
   .box-form .inputs{overflow:hidden}
   .signInPage .login-image{margin-right: -16%;position: relative;z-index: 9;width: 190px;}
-  .box-form button{font-size:16px;padding:12px 35px;display:inline-block;border:0;outline:0;background-image:linear-gradient(135deg,#FFE600 10%,#f2da00 100%)}
+  .box-form button.btnsubmit, .box-form button.btnsubmit{font-size:16px;padding:12px 35px;display:inline-block;border:0;outline:0;background-image:linear-gradient(135deg,#FFE600 10%,#f2da00 100%)}
   .box-form button:hover{color: #333 !important;}
   .box-form .form-control-label{text-align: left;color: var(--black);margin-bottom: 5px;font-weight: var(--main-medium);font-size: 14px}
   .box-form h2{color: var(--black);}
-  
+  .box-form .col-lg-6, .box-form .col-md-6 {flex: 1 0 auto;}
+  .react-datepicker__navigation-icon--previous, .react-datepicker__navigation--next{
+    background-image: transparent;
+  }
+
+  .react-datepicker__day--keyboard-selected{
+    background-color:var(--theme-color-yellow) !important;
+  }
 
   .OnSubmitCertify1 .container, .OnSubmitCertify2 .container{border-radius: 20px}
   .card-0{background: linear-gradient(-18deg, rgb(255, 255, 255) 50%, var(--theme-color-yellow) 50%);color: var(--white);border: 0px;box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
@@ -57,6 +64,7 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   
 
   .img{border:1px solid #ddd;padding:10px;width:50px;height:50px}
+  .button-grp.button-grp-Ex .btn{width: 48%;}
   .btn{margin:3px}
   .btn-orange{background-color:var(--theme-color-yellow)!important;color:var(--var(--black))}
   .btnsubmit{margin-top:20px}
@@ -87,6 +95,17 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   .create input{width:50%;padding:2px;margin:2px 0;border:1px solid #e4da69;box-sizing:border-box;display:block}
   .create button{background:#FFE600;color:#2E2E38;border:10px;padding:8px;border-radius:8px;cursor:pointer;margin-right:20px;margin-bottom:20px}
 
+
+/************ Table *************************/
+  #generaltables{margin: 0;padding: 0;}
+  .table-bg .form-group.row .col{padding-right: 5px;padding-left: 5px;}
+  .table {margin-bottom: 0;border: 1px solid #FFE600}
+  .table thead th, .table tbody td {padding: 4px 8px;vertical-align: top;border-top: 1px solid #dee2e6;}
+  .table thead th{color: var(--white);background-color: #333;font-weight: 500;}
+  .table tbody td{color: #1a1b1b;}
+  .table-striped tbody tr:nth-of-type(odd){background-color:#f6f6f6}
+
+
 /*-------------------------[media block]---------------------------*/
 
 @media (min-width: 1200px){
@@ -106,6 +125,7 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
   @media (max-width: 991px){
   .logopart h1 {font-size: calc(.75rem + 1.5vw);}
   .login-welcome-message h1 span {font-size: 36px;}
+  .button-grp.button-grp-Ex .btn{width: 96%;}
   }
   @media (max-width: 800px){
   .login-welcome-message h1 span {font-size: 22px;}
@@ -122,6 +142,14 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
     .box-form .right {padding: 20px;}
     .py-3.OnSubmitCertify1, .py-3.OnSubmitCertify2 {padding-top: 20px !important;}
     .card-0 {width: 96% !important;}
+
+    #generaltables table,#generaltables thead,#generaltables tbody,#generaltables th,#generaltables td,#generaltables tr {display: block;}
+    #generaltables thead tr {position: absolute;top: -9999px;left: -9999px;}    
+    #generaltables tr { border: 1px solid #ccc; }    
+    #generaltables td {border: none;border-bottom: 0 solid #eee;position: relative;padding-left: 50% !important;white-space: normal;text-align:right;font-weight: 500;padding: 4px 15px;}   
+    #generaltables td:before {position: absolute;top: 6px;left: 15px;width: 45%;padding-right: 10px;
+    white-space: nowrap;text-align:left;font-weight: bold;}  
+    #generaltables td:before { content: attr(data-title); }
   }    
   
   @media (min-width: 768px){
@@ -139,7 +167,7 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
 
   /* These below are temporary just for table (28-10-2022) */
    
-  table, th, td {
+  /* table, th, td {
     border: 3px solid #FFE600;
   }
 
@@ -152,7 +180,7 @@ p{font-size: 16px;line-height: 25px !important;font-weight: 500}
     height: 100px;
     margin-left: auto;  
     margin-right: auto;
-  }
+  } */
     
   
 

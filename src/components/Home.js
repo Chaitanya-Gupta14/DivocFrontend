@@ -55,7 +55,7 @@ const Home = () => {
             <div className="col-12 col-sm-6 col-md-4 col-lg-4 p-2">
               <div className="card text-center" key={index}>
                 <h5 className="card-title"> {value} </h5>
-                <div className="button-grp d-flex flex-wrap justify-content-center align-item-center mt-auto">
+                <div className="button-grp button-grp-Ex d-flex flex-wrap justify-content-center align-item-center mt-auto">
                   <button className="btn btn-orange" onClick={() => handleCertify(index,value)}>Certify</button>
                   <button className="btn btn-orange" onClick={() => handleDownload(value)}>Download</button>
                   <button className="btn btn-orange" onClick={handleUpdate}>Update Certificate</button>

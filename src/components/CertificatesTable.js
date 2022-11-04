@@ -6,32 +6,35 @@ import { parsedResponse } from "../service/listCertificateTable";
 const TableContent = () => {
      
 return(
-    <div className="container-fluid px-1 py-3 mx-auto OnSubmitCertify2">
-        <table >
-            <tbody>
-            <tr>
-                <th align= "center">ID</th>
-                <th align= "center">Name</th>
-                <th align= "center">Transaction ID</th>
-                <th align= "center">Schema Name</th>
-                <th align= "center">Status</th>
-            </tr>
-            
-            {
-            parsedResponse.map((val, index) => {
-                return (
-                <tr key={index}>
-                    <td>{val.id}</td>
-                    <td>{val.name}</td>
-                    <td>{val.transactionId}</td>
-                    <td>{val.schemaname}</td>
-                    <td>{val.status}</td>
-                </tr>
-                )
-            })
-            }
-            </tbody>
-        </table>
+    <div className="container px-1 py-3 mx-auto OnSubmitCertify2" id="generaltables">
+        <div class="table-responsive">
+            <table className="table table-striped table-bordered">
+                <thead class="cf">
+                    <tr>
+                        <th align= "center">ID</th>
+                        <th align= "center">Name</th>
+                        <th align= "center">Transaction ID</th>
+                        <th align= "center">Schema Name</th>
+                        <th align= "center">Status</th>
+                    </tr>
+                </thead>
+                <tbody>         
+                { 
+                parsedResponse.map((val, index) => {
+                    return (
+                    <tr key={index}>
+                        <td data-title="ID">{val.id} 1</td>
+                        <td data-title="Name">{val.name} 11</td>
+                        <td data-title="Transaction ID">{val.transactionId} 111</td>
+                        <td data-title="Schema Name">{val.schemaname}  1111</td>
+                        <td data-title="Status">{val.status}  11111</td>
+                    </tr>
+                    )
+                })
+                }
+                </tbody>
+            </table>
+        </div>
     </div>
 )
 }
