@@ -19,7 +19,7 @@ const OnSubmitDownload = () => {
 
     const handleDownload = (e) => {
         e.preventDefault();
-        DownloadCertificate();
+        DownloadCertificate(CertificateId);
     }
 
     const handleList = (e) => {
@@ -38,10 +38,11 @@ return(
                     <div className="card box-form">
                         <form className="form-card">
                             <div className="row justify-content-between text-left">
-                                <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
-                                    <label className="form-control-label px-0">Transaction Id:</label> 
+                                <div className="form-group col-12 col-md-6 col-lg-3 flex-column d-flex"> 
+                                    <label className="form-control-label px-0">Certificate Id</label> 
                                     <input 
-                                    type="text" 
+                                    type="text"
+                                    required 
                                     className="form-control" 
                                     value= {CertificateId}
                                     onChange={(e) => setCertificateId(e.target.value)}
