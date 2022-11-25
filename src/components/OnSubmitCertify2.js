@@ -40,6 +40,7 @@ const OnSubmitCertify2 = () => {
     const [registrationExpiry,setRegistrationExpiry] = useState("");
     const [issuer,setIssuer] = useState("");
     const [issuanceDate,setIssuanceDate] = useState("");
+    // ------------------ //
     const [transactionID,setTransactionID] = useState('');
     
     const handleSubmit = (e) => {

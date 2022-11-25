@@ -10,6 +10,8 @@ import OnSubmitDownload from './components/OnSubmitDownload';
 import ListCertificates from './components/CertificatesTable';
 import OnSubmitUpdate from './components/OnSubmitUpdate';
 import OnSubmitRevoke from './components/OnSubmitRevoke';
+import UpdatetheForm from './components/UpdateForm';
+
 
 
 function App() {
@@ -56,6 +58,10 @@ function App() {
 
             <Route path="/ListCertificate">
               <ListCertificates />
+            </Route>
+
+            <Route path="/UpdateForm">
+              <UpdatetheForm />
             </Route>
 
            {/* <Route path="/immunization">

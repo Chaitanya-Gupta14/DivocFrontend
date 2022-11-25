@@ -12,6 +12,10 @@ const OnSubmitUpdate = () => {
     const [Date, setDate] = useState("");
 //     const Redirect = useHistory();
 //    
+    const handleRevoke = (e) => {
+        e.preventDefault();
+
+    }
 //     const handleList = (e) => {
 //         e.preventDefault();
 //         ListCertificates();
@@ -26,7 +30,7 @@ return(
                 <div className="col-xl-10 col-lg-10 col-md-10 col-11 text-center mb-4 flex-column"> 
                     <h2 className="font-weight-bold ml-md-0 mx-auto text-center text-sm-left mt-3 mb-2 form-title">Revoke Certificate</h2> 
                     <div className="card box-form">
-                        <form className="form-card">
+                        <form className="form-card" OnSubmit = {(e) => handleRevoke(CertificateId)}>
                             <div className="row justify-content-between text-left">
                                 <div className="form-group col-12 col-md-6 col-lg-6 flex-column d-flex"> 
                                     <label className="form-control-label px-0">Certificate Id</label> 

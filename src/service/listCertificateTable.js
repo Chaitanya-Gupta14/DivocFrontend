@@ -18,7 +18,7 @@ export const ListCertificates = () => {
         method: 'get',
         url: API_URL + SchemaName,
         headers: {
-          'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFWVVzZXIiLCJleHAiOjE2Njc1MDQ2NTksImlhdCI6MTY2NzQ4NjY1OX0.9exzJjoM1vH-V49lsEDKOzK8sBNTBSJnq82nPLdfJqpC2a7M8ysGUK2831ZIr3ryQY5g25qpXjsuMZEzlFnYiw',
+          'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFWVVzZXIiLCJleHAiOjE2Njg1MzI3MzAsImlhdCI6MTY2ODUxNDczMH0.nASST02idVhy9OjPiDxsFsHpMnKIbCyuDBZ9zcWRdXZC6F2TxP5Uyo0Pbk3Xmx6Tvrlewj6YhpMefPCe0p6-Gg',
           'Content-Type': 'application/json'
         },
       };

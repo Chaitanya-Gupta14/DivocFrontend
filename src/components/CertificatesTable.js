@@ -4,7 +4,7 @@ import { parsedResponse } from "../service/listCertificateTable";
 // ID,name,transactionID,schemaName,status
 
 const TableContent = () => {
-     
+     console.log(parsedResponse)
 return(
     <div className="container px-1 py-3 mx-auto OnSubmitCertify2" id="generaltables">
         <div class="table-responsive">
@@ -23,11 +23,11 @@ return(
                 parsedResponse.map((val, index) => {
                     return (
                     <tr key={index}>
-                        <td data-title="ID">{val.id} 1</td>
-                        <td data-title="Name">{val.name} 11</td>
-                        <td data-title="Transaction ID">{val.transactionId} 111</td>
-                        <td data-title="Schema Name">{val.schemaname}  1111</td>
-                        <td data-title="Status">{val.status}  11111</td>
+                        <td data-title="ID">{val.id} </td>
+                        <td data-title="Name">{val.name} </td>
+                        <td data-title="Transaction ID">{val.transactionId}</td>
+                        <td data-title="Schema Name">{val.schemaname} </td>
+                        <td data-title="Status">{val.status}</td>
                     </tr>
                     )
                 })
